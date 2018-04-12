@@ -16,7 +16,7 @@ will probably be added but I will have to see how they come together throughout
 the course of this project.
 
 Resources:
-https://opengameart.org
-https://freesound.org
-https://stackoverflow.com/
+* https://opengameart.org
+* https://freesound.org
+* https://stackoverflow.com/
 
