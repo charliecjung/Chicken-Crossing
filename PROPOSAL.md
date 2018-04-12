@@ -1,4 +1,5 @@
-##I will be using openFrameworks to create a **Frogger** game.
+#               Frogger 
+## I will be using openFrameworks to create a **Frogger** game.
 
 [OpenGameArt](https://opengameart.org) will be where I get a lot of the sprites for 
 the video game. Audio will be provided by [Freesound](https://freesound.org)
