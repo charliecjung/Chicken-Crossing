@@ -1,6 +1,3 @@
-
-            #Frogger
-
 ##I will be using openFrameworks to create a **Frogger** game.
 
 [OpenGameArt](https://opengameart.org) will be where I get a lot of the sprites for 
