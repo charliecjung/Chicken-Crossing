@@ -5,15 +5,26 @@
 #include "ofMain.h"
 class Player {
 	public:
-
+		Player();
+		ofImage getCurrentImage();
+		int getX();
+		int getY();
+		int getWidth();
+		int getHeight();
+		int getSize();
+		void setX(int newX);
+		void setY(int newY);
+		const int getEndOfGameYLevel();
+		bool isFrogStillAlive();
 	private:
 		ofImage currentImage;
-		int x = (ofGetWindowWidth()/2)-width;
-		int y = ofGetWindowHeight - height;
-		int width = 50;
-		int height = 50;
-		int endOfGameYLevel = 0;
-		bool isAlive = true;
+		int x;
+		int y;
+		int width;
+		int height;
+		int size;
+		const int endOfGameYLevel = 0;
+		bool isAlive;
 
 
 };

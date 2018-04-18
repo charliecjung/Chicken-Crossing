@@ -2,6 +2,7 @@
 #define RESOURCE_MANAGER_H
 
 #include "ofMain.h"
+#include "Player.h"
 
 
 class ResourceManager : public ofBaseApp {
@@ -20,7 +21,12 @@ public:
 	void windowResized(int w, int h);
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
-	
+	void killPlayer();
+	void moveLeft();
+	void moveRight();
+	void moveUp();
+	void moveDown();
+	void endGame();
 
 private:
 	ofImage frogUp;
@@ -28,7 +34,8 @@ private:
 	ofImage frogRight;
 	ofImage frogDown;
 	ofImage backgroundImage;
-
+	ofImage currentImage;
+	Player player_;
 };
 
 #endif //RESOURCE_MANAGER_H
