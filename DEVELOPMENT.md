@@ -5,7 +5,7 @@ Currently working on the movement of the frog and the edge cases (such as the bo
 
 Debugging by using ofDrawLine() and ofPolyLine() will try to update with <i> Google C++ styling guide </i> if enough time remains. Writeup concluded for now.
 
-Experimented with main.cpp where I would create a <b> ResoureceManager </b> object and pass it into ofRunApp(). Unfortunately, my program would fail so I resorted back to
+Experimented with main.cpp where I would create a <b> ResourceManager </b> object and pass it into ofRunApp(). Unfortunately, my program would fail so I resorted back to
 passing a new ResourceManager() everytime the program is run. 
 
 I was able to fix the edge cases by printing lines with the ofDrawLine() functions that enabled me to print the x,y,screenWidth,screenHeight of my program for debugging purposes.
@@ -14,7 +14,7 @@ All in all, it went <i> well </i>.
 <h2> Task Two -- Making the Background Image with Gimp </h2>
 
 <b> Hold up </b>. I realized why my frog was not displaying in the center-bottom of my screen.
-I was setting all of the frog's <b> (Player's) </b> variables in a constructor but I was
+I was setting all the frog's <b> (Player's) </b> variables in a constructor but I was
 creating a Player object on the stack... Yup, I created a setup() function for Player
 to initialize its own variables before the program plays any sound. <i> Near the start
 of the program :) </i>
@@ -45,5 +45,7 @@ Background Remix: https://freesound.org/people/Timbre/sounds/424028/
 Original Background Sound: https://freesound.org/people/Suburbanwizard/sounds/423294/
 
 Background Image: www.davidstenfors.com
+
+
 <b> Get attribution from Frog sprites </b>
 
