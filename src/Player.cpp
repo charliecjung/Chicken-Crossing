@@ -1,59 +1,65 @@
 #include "Player.h"
+
 #include "ofxGui.h"
 
 
 Player::Player() {
-	width = 100;
-	height = 100;
-
-	isAlive = true;
-	size = 50;
-	x = (ofGetWindowWidth() / 2) - (size * 2);
-	y = (ofGetWindowHeight() - (size * 2));
+	width_ = 100;
+	height_ = 100;
+	isAlive_ = true;
+	size_ = 50;
+	x_ = (ofGetWindowWidth() / 2) - (size_ * 2);
+	y_ = (ofGetWindowHeight() - (size_ * 2));
 }
 
 void Player::setUp() {
-	//Acts as a @Before
-	width = 100;
-	height = 100;
-	isAlive = true;
-	size = 50;
-	//Hardcoded Constants for bottom middle of screen. (Screen dimensions not created yet)
-	x = 1820;
-	y = 2060;
-	//x = (ofGetWindowWidth() / 2) - (size * 2);
-	//y = (ofGetWindowHeight() - (size * 2));
+
+	// Acts as a @Before (In Catch cases).
+
+	width_ = 100;
+	height_ = 100;
+	isAlive_ = true;
+	size_ = 50;
+
+	// Hardcoded Constants for bottom middle of screen. Used to place the frog in the beginning position of the game
+    // Starts the frog off on the other side of the road (bottom side).
+
+	x_ = 1820;
+	y_ = 2060;
+
+	// x = (ofGetWindowWidth() / 2) - (size * 2);
+	// y = (ofGetWindowHeight() - (size * 2));
 }
 ofImage Player::getCurrentImage() {
-	return currentImage;
+	return currentImage_;
 }
 
 int Player::getX() {
-	return x;
+	return x_;
 }
 int Player:: getY() {
-	return y;
+	return y_;
 }
 int Player::getWidth() {
-	return width;
+	return width_;
 }
 int Player::getSize() {
-	return size;
+	return size_;
 }
 int Player::getHeight() {
-	return height;
+	return height_;
 }
 const int Player::getEndOfGameYLevel() {
-	return endOfGameYLevel;
+	return kEndOfGameYLevel_;
 }
 void Player::setX(int newX) {
-	x = newX;
+	x_ = newX;
 }
 void Player::setY(int newY) {
-	y = newY;
+	y_ = newY;
 }
 bool Player::isFrogStillAlive() {
-	return isAlive;
+	return isAlive_;
 }
 
 

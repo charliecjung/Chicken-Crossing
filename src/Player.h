@@ -2,33 +2,34 @@
 #define PLAYER_H
 
 #include <string>
+
 #include "ofMain.h"
+
 class Player {
-	public:
-		Player();
-		ofImage getCurrentImage();
-		int getX();
-		int getY();
-		int getWidth();
-		int getHeight();
-		int getSize();
-		void setX(int newX);
-		void setY(int newY);
-		void setUp();
-		const int getEndOfGameYLevel();
-		bool isFrogStillAlive();
-	private:
+    public:
 
-		ofImage currentImage;
-		int x;
-		int y;
-		int width;
-		int height;
-		int size;
-		const int endOfGameYLevel = 0;
-		bool isAlive;
+    Player();
+    ofImage getCurrentImage();
+    int getX();
+    int getY();
+    int getWidth();
+    int getHeight();
+    int getSize();
+    void setX(int newX);
+    void setY(int newY);
+    void setUp();
+    const int getEndOfGameYLevel();
+    bool isFrogStillAlive();
+    private:
 
-
+    ofImage currentImage_;
+    int x_;
+    int y_;
+    int width_;
+    int height_;
+    int size_;
+    // kEndOfGameYLevel_ is simply when the player hits y = 0 (The frog crosses the road).
+    const int kEndOfGameYLevel_ = 0;
+    bool isAlive_;
 };
-
-#endif //PLAYER_H
+#endif // PLAYER_H

@@ -1,9 +1,9 @@
 #ifndef RESOURCE_MANAGER_H
 #define RESOURCE_MANAGER_H
 
-#include "ofMain.h"
 #include "Player.h"
 
+#include "ofMain.h"
 
 class ResourceManager : public ofBaseApp {
 public:
@@ -29,14 +29,14 @@ public:
 	void endGame();
 
 private:
-	ofImage frogUp;
-	ofImage frogLeft;
-	ofImage frogRight;
-	ofImage frogDown;
-	ofImage backgroundImage;
-	ofImage currentImage;
+	ofImage frogUp_;
+	ofImage frogLeft_;
+	ofImage frogRight_;
+	ofImage frogDown_;
+	ofImage backgroundImage_;
+	ofImage currentImage_;
 	Player player_;
-	ofSoundPlayer SoundPlayer;
+	ofSoundPlayer SoundPlayer_;
 };
 
-#endif //RESOURCE_MANAGER_H
+#endif // RESOURCE_MANAGER_H
