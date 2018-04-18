@@ -1,6 +1,6 @@
 #include "ResourceManager.h"
 #include "Player.h"
-
+#include "ofxGui.h"
 //--------------------------------------------------------------
 void ResourceManager::setup() {
 	frogUp.load("images/FROG/FROG_UP.png");
@@ -20,7 +20,7 @@ void ResourceManager::update() {
 //--------------------------------------------------------------
 void ResourceManager::draw() {
 	currentImage.draw(player_.getX(), player_.getY(), player_.getWidth(), player_.getHeight());
-
+	
 }
 
 //--------------------------------------------------------------
@@ -39,6 +39,10 @@ void ResourceManager::keyPressed(int key) {
 	}
 	else if (key == OF_KEY_DOWN) {
 		moveDown();
+	}
+	else if (key == 'P') {
+		ofToggleFullscreen();
+
 	}
 	else {
 		std::cout << "Cannot understand your next movement. Please try again." << std::endl;
@@ -115,12 +119,13 @@ void ResourceManager:: moveLeft() {
 }
 void ResourceManager::moveRight() {
 	//Case for right edge of screen
+	currentImage = frogRight;
 	int futureXPos = player_.getX() + player_.getSize();
-	if (futureXPos < ofGetWindowWidth() ) {
+	if (futureXPos < (ofGetWindowWidth() - (player_.getSize()*2 ))) {
 		player_.setX(futureXPos);
 	}
-	else if (futureXPos >= ofGetWindowWidth()) {
-		player_.setX(ofGetWindowWidth());
+	else if (futureXPos >= (ofGetWindowWidth() - (player_.getSize() * 2))) {
+		player_.setX((ofGetWindowWidth() - (player_.getSize() * 2)));
 	}
 
 }
@@ -140,10 +145,10 @@ void ResourceManager::moveDown() {
 	currentImage = frogDown;
 	//Case for bottom edge of screen
 	int futureYPos = player_.getY() + player_.getSize();
-	if (futureYPos < ofGetWindowHeight()) {
+	if (futureYPos < (ofGetWindowHeight() - (player_.getSize() * 2))) {
 		player_.setY(futureYPos);
 	}
-	else if (futureYPos >= ofGetWindowHeight()) {
-		player_.setY(ofGetWindowHeight());
+	else if (futureYPos >= (ofGetWindowHeight() - (player_.getSize() * 2))) {
+		player_.setY((ofGetWindowHeight() - (player_.getSize() * 2)));
 	}
 }
