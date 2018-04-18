@@ -32,7 +32,9 @@ This next week, I will try to add enemies such as cars and maybe use sorting alg
 
 
 
+<h2> Fixed code according to <i> Google's C++ styling guide </i> rather than work on test cases. Why? Rubric doesn't mention <b> test cases </b> </h2>
 
+Documented more code. Freshened up comments. Created "F1" commit for first final "commit".
 
 
 

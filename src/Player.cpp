@@ -12,6 +12,8 @@ Player::Player() {
 	y_ = (ofGetWindowHeight() - (size_ * 2));
 }
 
+// Player's setup method where I fill in the variables for a Player object (on the stack).
+
 void Player::setUp() {
 
 	// Acts as a @Before (In Catch cases).
