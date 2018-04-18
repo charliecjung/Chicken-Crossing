@@ -3,23 +3,37 @@
 #include "ofxGui.h"
 //--------------------------------------------------------------
 void ResourceManager::setup() {
-	frogUp.load("images/FROG/FROG_UP.png");
-	frogLeft.load("images/FROG/FROG_LEFT.png");
-	frogRight.load("images/FROG/FROG_RIGHT.png");
-	frogDown.load("images/FROG/FROG_DOWN.png");
-	currentImage.load("images/FROG/FROG_UP.png");
-	//backgroundImage.load("images/backgroundImage.png");
-}
-
-//--------------------------------------------------------------
-void ResourceManager::update() {
-	//currentImage.draw(player_.getX(), player_.getY(), player_.getWidth(), player_.getHeight());
+	player_.setUp();
+	backgroundImage.load("images/images/backgroundImage.png");
+	frogUp.load("images/frog/FROG_UP.png");
+	frogLeft.load("images/frog/FROG_LEFT.png");
+	frogRight.load("images/frog/FROG_RIGHT.png");
+	frogDown.load("images/frog/FROG_DOWN.png");
+	currentImage.load("images/frog/FROG_UP.png");
+	SoundPlayer.load("music/backgroundMusic.flac");
+	SoundPlayer.setLoop(true);
+	SoundPlayer.play();
 	
 }
 
 //--------------------------------------------------------------
+void ResourceManager::update() {
+	
+	
+}
+//Cited from:
+//https://forum.openframeworks.cc/t/background-image-in-openframeworks-app/11731
+//--------------------------------------------------------------
 void ResourceManager::draw() {
+	glPolygonMode(GL_BACK, GL_FILL);
+	backgroundImage.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	glPolygonMode(GL_FRONT, GL_FILL);
+	//ofDrawBitmapString("X: " + ofToString(player_.getX()), 400, 600);
+	//ofDrawBitmapString("Y: " + ofToString(player_.getY()), 600, 800);
 	currentImage.draw(player_.getX(), player_.getY(), player_.getWidth(), player_.getHeight());
+	if (player_.getY() <= 0) {
+		std::exit(0);
+}
 	
 }
 
@@ -40,7 +54,7 @@ void ResourceManager::keyPressed(int key) {
 	else if (key == OF_KEY_DOWN) {
 		moveDown();
 	}
-	else if (key == 'P') {
+	else if (key == 'p') {
 		ofToggleFullscreen();
 
 	}

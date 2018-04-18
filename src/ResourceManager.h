@@ -36,6 +36,7 @@ private:
 	ofImage backgroundImage;
 	ofImage currentImage;
 	Player player_;
+	ofSoundPlayer SoundPlayer;
 };
 
 #endif //RESOURCE_MANAGER_H

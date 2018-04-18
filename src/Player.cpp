@@ -1,15 +1,29 @@
 #include "Player.h"
+#include "ofxGui.h"
+
 
 Player::Player() {
 	width = 100;
 	height = 100;
-	x = (ofGetWindowWidth() / 2) - width;
-	y = ofGetWindowHeight() - height;
+
 	isAlive = true;
 	size = 50;
-	
+	x = (ofGetWindowWidth() / 2) - (size * 2);
+	y = (ofGetWindowHeight() - (size * 2));
 }
 
+void Player::setUp() {
+	//Acts as a @Before
+	width = 100;
+	height = 100;
+	isAlive = true;
+	size = 50;
+	//Hardcoded Constants for bottom middle of screen. (Screen dimensions not created yet)
+	x = 1820;
+	y = 2060;
+	//x = (ofGetWindowWidth() / 2) - (size * 2);
+	//y = (ofGetWindowHeight() - (size * 2));
+}
 ofImage Player::getCurrentImage() {
 	return currentImage;
 }

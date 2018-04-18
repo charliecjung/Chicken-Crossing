@@ -14,9 +14,11 @@ class Player {
 		int getSize();
 		void setX(int newX);
 		void setY(int newY);
+		void setUp();
 		const int getEndOfGameYLevel();
 		bool isFrogStillAlive();
 	private:
+
 		ofImage currentImage;
 		int x;
 		int y;
