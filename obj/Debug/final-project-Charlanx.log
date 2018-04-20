@@ -1,9 +1,137 @@
-﻿  Player.cpp
-  ResourceManager.cpp
+﻿  Coordinator.cpp
   main.cpp
+  Player.cpp
+  Action.cpp
+  ActionEase.cpp
+  CallFunc.cpp
+  VisibilityAction.cpp
+  ActionInstant.cpp
   Unknown compiler version - please run the configure tests and report the results
   Unknown compiler version - please run the configure tests and report the results
   Unknown compiler version - please run the configure tests and report the results
-  final-project-Charlanx.vcxproj -> C:\Users\Charlie Jung\Github\final-project-Charlanx\bin\final-project-Charlanx_debug.exe
-  
-  	                   9	C:\Users\Charlie Jung\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  ActionFloat.cpp
+  ActionVec3.cpp
+  ActionVec4.cpp
+  BezierAction.cpp
+  DelayTime.cpp
+  EaseBack.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  EaseBezierAction.cpp
+  EaseBounce.cpp
+  EaseCircle.cpp
+  EaseCubic.cpp
+  EaseElastic.cpp
+  EaseExponential.cpp
+  EaseIn.cpp
+  EaseInOut.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  EaseOut.cpp
+  EaseQuadratic.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  EaseQuartic.cpp
+  EaseQuintic.cpp
+  EaseSineIn.cpp
+  EaseSineInOut.cpp
+  EaseSineOut.cpp
+  FadeAction.cpp
+  MoveAction.cpp
+  RepeatAction.cpp
+  RotateAction.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  ScaleAction.cpp
+  Sequence.cpp
+  Spawn.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  TintAction.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  ActionInterval.cpp
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actioninterval\sequence.cpp(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actioninterval\spawn.cpp(57): warning C4018: '<': signed/unsigned mismatch
+  ActionManager.cpp
+  ActionTarget.cpp
+  Array.cpp
+  TweenFunction.cpp
+  ofxBaseGui.cpp
+  ofxButton.cpp
+  ofxGuiGroup.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  ofxLabel.cpp
+  ofxPanel.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  ofxSlider.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actionmanager.cpp(96): warning C4018: '>=': signed/unsigned mismatch
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actionmanager.cpp(276): warning C4018: '<': signed/unsigned mismatch
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actionmanager.cpp(303): warning C4018: '<': signed/unsigned mismatch
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actionmanager.cpp(332): warning C4018: '<': signed/unsigned mismatch
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actionmanager.cpp(363): warning C4018: '<': signed/unsigned mismatch
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxactionmanager\src\actionmanager.cpp(402): warning C4018: '<': signed/unsigned mismatch
+  Unknown compiler version - please run the configure tests and report the results
+  ofxSliderGroup.cpp
+  ofxToggle.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  ofxVectorGraphics.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  CreEPS.cpp
+  Player.h
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(341): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(350): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1772): note: see declaration of 'sprintf'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1772): note: see declaration of 'sprintf'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(361): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1772): note: see declaration of 'sprintf'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(368): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1772): note: see declaration of 'sprintf'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(635): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(647): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(648): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(727): warning C4996: 'ns_creeps::strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(337): note: see declaration of 'ns_creeps::strncpy'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(925): warning C4244: '=': conversion from 'const ns_creeps::CreEPS_INT' to 'float', possible loss of data
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(931): warning C4305: '*=': truncation from 'double' to 'float'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(939): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(996): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(1006): warning C4996: 'ns_creeps::strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'ns_creeps::strcpy'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(1011): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(1075): warning C4996: 'ns_creeps::ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\time.h(475): note: see declaration of 'ns_creeps::ctime'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(1251): warning C4305: 'argument': truncation from 'double' to 'const ns_creeps::CreEPS_FLOAT'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(1240): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(2010): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1467): note: see declaration of 'vsprintf'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(2028): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1467): note: see declaration of 'vsprintf'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(2044): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1467): note: see declaration of 'vsprintf'
+c:\users\charlie jung\desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxvectorgraphics\libs\creeps.cpp(2061): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1467): note: see declaration of 'vsprintf'
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+obj\Debug\Player.obj : warning LNK4042: object specified more than once; extras ignored
+     Creating library bin\final-project-Charlanx_debug.lib and object bin\final-project-Charlanx_debug.exp
+Coordinator.obj : error LNK2019: unresolved external symbol "public: int __thiscall Player::getX(void)" (?getX@Player@@QAEHXZ) referenced in function "public: virtual void __thiscall Coordinator::draw(void)" (?draw@Coordinator@@UAEXXZ)
+Coordinator.obj : error LNK2019: unresolved external symbol "public: int __thiscall Player::getY(void)" (?getY@Player@@QAEHXZ) referenced in function "public: virtual void __thiscall Coordinator::draw(void)" (?draw@Coordinator@@UAEXXZ)
+Coordinator.obj : error LNK2019: unresolved external symbol "public: int __thiscall Player::getWidth(void)" (?getWidth@Player@@QAEHXZ) referenced in function "public: virtual void __thiscall Coordinator::draw(void)" (?draw@Coordinator@@UAEXXZ)
+Coordinator.obj : error LNK2019: unresolved external symbol "public: int __thiscall Player::getHeight(void)" (?getHeight@Player@@QAEHXZ) referenced in function "public: virtual void __thiscall Coordinator::draw(void)" (?draw@Coordinator@@UAEXXZ)
+Coordinator.obj : error LNK2019: unresolved external symbol "public: int __thiscall Player::getSize(void)" (?getSize@Player@@QAEHXZ) referenced in function "public: void __thiscall Coordinator::MoveLeft(void)" (?MoveLeft@Coordinator@@QAEXXZ)
+Coordinator.obj : error LNK2019: unresolved external symbol "public: void __thiscall Player::setX(int)" (?setX@Player@@QAEXH@Z) referenced in function "public: void __thiscall Coordinator::MoveLeft(void)" (?MoveLeft@Coordinator@@QAEXXZ)
+Coordinator.obj : error LNK2019: unresolved external symbol "public: void __thiscall Player::setY(int)" (?setY@Player@@QAEXH@Z) referenced in function "public: void __thiscall Coordinator::MoveUp(void)" (?MoveUp@Coordinator@@QAEXXZ)
+Coordinator.obj : error LNK2019: unresolved external symbol "public: void __thiscall Player::SetUp(void)" (?SetUp@Player@@QAEXXZ) referenced in function "public: void __thiscall Coordinator::SetUp(void)" (?SetUp@Coordinator@@QAEXXZ)
+bin\final-project-Charlanx_debug.exe : fatal error LNK1120: 8 unresolved externals

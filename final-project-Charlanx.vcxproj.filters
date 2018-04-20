@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\Action.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionEase.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInstant\CallFunc.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInstant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInstant\VisibilityAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInstant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInstant.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ActionFloat.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ActionVec3.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ActionVec4.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\BezierAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\DelayTime.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBack.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBezierAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBounce.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCircle.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCubic.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseElastic.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseExponential.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseIn.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseInOut.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseOut.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuadratic.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuartic.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuintic.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineIn.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineInOut.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineOut.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\FadeAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\MoveAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\RepeatAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\RotateAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ScaleAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Sequence.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Spawn.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\TintAction.cpp">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionManager.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionTarget.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\Array.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\TweenFunction.cpp">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxButton.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxGuiGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxLabel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxPanel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSlider.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSliderGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxToggle.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxVectorGraphics\src\ofxVectorGraphics.cpp">
+      <Filter>addons\ofxVectorGraphics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxVectorGraphics\libs\CreEPS.cpp">
+      <Filter>addons\ofxVectorGraphics\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Coordinator.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\Player.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxActionManager">
+      <UniqueIdentifier>{4AD6DBB8-C0EF-97DE-F3FC-F6CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxActionManager\src">
+      <UniqueIdentifier>{FA168843-38EF-77B2-C050-4253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxActionManager\src\ActionInstant">
+      <UniqueIdentifier>{0A500FD4-1483-7FD3-6C62-54D2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxActionManager\src\ActionInterval">
+      <UniqueIdentifier>{DA9FBE55-A6CA-EDFA-E9E6-C438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxActionManager\src\ActionInterval\Easings">
+      <UniqueIdentifier>{3A845667-5292-92A1-649C-AAF3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui">
+      <UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui\src">
+      <UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxVectorGraphics">
+      <UniqueIdentifier>{5A7F3658-B06B-DB97-F4E1-DD19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxVectorGraphics\src">
+      <UniqueIdentifier>{F615F000-D48C-B1D6-F1C2-6EDD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxVectorGraphics\libs">
+      <UniqueIdentifier>{B341F552-35C4-7EB6-B3C9-9D96}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\Action.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionEase.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInstant\CallFunc.h">
+      <Filter>addons\ofxActionManager\src\ActionInstant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInstant\VisibilityAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInstant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInstant.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ActionFloat.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ActionVec3.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ActionVec4.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\BezierAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\DelayTime.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBack.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBezierAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseBounce.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCircle.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseCubic.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseElastic.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseExponential.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseIn.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseInOut.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseOut.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuadratic.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuartic.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseQuintic.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineIn.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineInOut.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Easings\EaseSineOut.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval\Easings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\FadeAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\MoveAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\RepeatAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\RotateAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\ScaleAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Sequence.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\Spawn.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval\TintAction.h">
+      <Filter>addons\ofxActionManager\src\ActionInterval</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionInterval.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionManager.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ActionTarget.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\Array.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\ofxActionManager.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\TweenFunction.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\uthash.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxActionManager\src\utlist.h">
+      <Filter>addons\ofxActionManager\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxButton.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxGuiGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxLabel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxPanel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSlider.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSliderGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxToggle.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxVectorGraphics\src\ofxVectorGraphics.h">
+      <Filter>addons\ofxVectorGraphics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxVectorGraphics\libs\CreEPS.hpp">
+      <Filter>addons\ofxVectorGraphics\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Desktop\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxVectorGraphics\libs\CreEPS_Types.hpp">
+      <Filter>addons\ofxVectorGraphics\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Coordinator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>

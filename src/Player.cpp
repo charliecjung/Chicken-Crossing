@@ -3,18 +3,10 @@
 #include "ofxGui.h"
 
 
-Player::Player() {
-	width_ = 100;
-	height_ = 100;
-	isAlive_ = true;
-	size_ = 50;
-	x_ = (ofGetWindowWidth() / 2) - (size_ * 2);
-	y_ = (ofGetWindowHeight() - (size_ * 2));
-}
 
 // Player's setup method where I fill in the variables for a Player object (on the stack).
 
-void Player::setUp() {
+void Player::SetUp() {
 
 	// Acts as a @Before (In Catch cases).
 

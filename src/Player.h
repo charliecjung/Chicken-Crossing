@@ -7,8 +7,7 @@
 
 class Player {
     public:
-
-    Player();
+	
     ofImage getCurrentImage();
     int getX();
     int getY();
@@ -17,9 +16,10 @@ class Player {
     int getSize();
     void setX(int newX);
     void setY(int newY);
-    void setUp();
+    void SetUp();
     const int getEndOfGameYLevel();
     bool isFrogStillAlive();
+
     private:
 
     ofImage currentImage_;

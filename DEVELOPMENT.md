@@ -48,6 +48,27 @@ Original Background Sound: https://freesound.org/people/Suburbanwizard/sounds/42
 
 Background Image: www.davidstenfors.com
 
+Cars Attribution: https://opengameart.org/content/2d-cars-pack
+
+<h1> Todo List </h1>
 
 <b> Get attribution from Frog sprites </b>
+
+<b> Frog can go to the right and show up to the left of the screen </b>
+
+<b> Nichola's suggestion for max replacing the move func's logic. </b>
+
+<h1> 1:02 AM Friday </h1>
+
+After many tribulations of reinstalling VStudio and recloning the project. I realized that deleting the <i> obsolete </i> constructor caused my program to work again.
+I am not entirely sure how my debugging process went but it was extremely exhausting.
+
+<h3> Edits that I will have pushed in the next commit </h3>
+<b> Changing functions to be NormalCamelCase (<i>Thank Google's C++ styling guide </i>) </b>
+<b> Changing the name of ResourceManager to Coordinator (Also have to change the compile name in .vcprojectx </b>
+
+Will be back...
+
+
+
 
