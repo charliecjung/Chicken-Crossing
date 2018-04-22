@@ -1,7 +1,20 @@
 ﻿  Coordinator.cpp
+  Player.cpp
   main.cpp
   Unknown compiler version - please run the configure tests and report the results
   Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  LINK : bin\final-project-Charlanx_debug.exe not found or not built by the last incremental link; performing full link
+     Creating library bin\final-project-Charlanx_debug.lib and object bin\final-project-Charlanx_debug.exp
   final-project-Charlanx.vcxproj -> C:\Users\Charlie Jung\Github\final-project-Charlanx\bin\final-project-Charlanx_debug.exe
   
   	                   9	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\
+  	    Older     		 2939392	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\assimp.dll
+  	    Older     		 1266176	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\fmodex.dll
+  	    Older     		 1312768	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\fmodexL.dll
+  	    Older     		 5647872	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\FreeImage.dll
+  	    Older     		  580608	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\freetype.dll
+  	    Older     		  237568	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\glut32.dll
+  	    Older     		 1178624	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\libeay32.dll
+  	    Older     		  269824	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\ssleay32.dll
+  	    Older     		   69632	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\Zlib.dll
