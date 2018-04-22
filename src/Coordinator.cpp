@@ -11,11 +11,11 @@
 void Coordinator::setup() {
 	player_.SetUp();
 	backgroundImage_.load("images/images/backgroundImage.png");
-	frogUp_.load("images/frog/FROG_UP.png");
-	frogLeft_.load("images/frog/FROG_LEFT.png");
-	frogRight_.load("images/frog/FROG_RIGHT.png");
-	frogDown_.load("images/frog/FROG_DOWN.png");
-	currentImage_.load("images/frog/FROG_UP.png");
+	frogUp_.load("images/chicken/chicken_up.png");
+	frogLeft_.load("images/chicken/chicken_left.png");
+	frogRight_.load("images/chicken/chicken_right.png");
+	frogDown_.load("images/chicken/chicken_down.png");
+	currentImage_.load("images/chicken/chicken_up.png");
 	SoundPlayer_.load("music/backgroundMusic.flac");
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();

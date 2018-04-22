@@ -42,17 +42,21 @@ Documented more code. Freshened up comments. Created "F1" commit for first final
 <b> Creative Commons: </b>
 https://creativecommons.org/licenses/by-nc/3.0/
 
+Frog attribution: https://opengameart.org/node/76895
+By <b> Shepardskin </b>: https://twitter.com/Shepardskin
+"Remix of Chicken by Shepardskin"
+to be used in Chick by Stendhal.
+
+
 Background Remix: https://freesound.org/people/Timbre/sounds/424028/
 
 Original Background Sound: https://freesound.org/people/Suburbanwizard/sounds/423294/
 
 Background Image: www.davidstenfors.com
 
-Cars Attribution: https://opengameart.org/content/2d-cars-pack
+Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
 <h1> Todo List </h1>
-
-<b> Get attribution from Frog sprites </b>
 
 <b> Frog can go to the right and show up to the left of the screen </b>
 
@@ -74,6 +78,8 @@ Will be back...
 Finally fixed a bug with the program not running at all. I wasn't called ofBaseApp's method properly with setup(). (Created a custom SetUp() function due to Google's styling guide)
 I have now removed the ofxActionManager and replaced it with ofx2DFigures because I believe it enables me to track collisions with enemies and the player.
 Updating a PUSH->Github.com.
+
+
 
 
 
