@@ -69,6 +69,12 @@ I am not entirely sure how my debugging process went but it was extremely exhaus
 
 Will be back...
 
+<h1> April 22, 2018 (Sunday) </h1>
+
+Finally fixed a bug with the program not running at all. I wasn't called ofBaseApp's method properly with setup(). (Created a custom SetUp() function due to Google's styling guide)
+I have now removed the ofxActionManager and replaced it with ofx2DFigures because I believe it enables me to track collisions with enemies and the player.
+Updating a PUSH->Github.com.
+
 
 
 
