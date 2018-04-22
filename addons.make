@@ -1,0 +1,3 @@
+ofx2DFigures
+ofxGui
+ofxVectorGraphics
