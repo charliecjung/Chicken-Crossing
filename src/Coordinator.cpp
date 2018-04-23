@@ -17,6 +17,11 @@ void Coordinator::setup() {
 	frogDown_.load("images/chicken/chicken_down.png");
 	currentImage_.load("images/chicken/chicken_up.png");
 	SoundPlayer_.load("music/backgroundMusic.flac");
+
+	testEnemy_.setup();
+	testEnemy_.LoadImage("images/enemies/Cars/Cars-01-01.png");
+	std::cout << "ID of CAR: " << &testEnemy_.getCurrentImage() << std::endl;
+	testEnemy_.draw();
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
 

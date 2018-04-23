@@ -1,8 +1,8 @@
 #ifndef COORDINATOR_H
 #define COORDINATOR_H
 
+#include "Enemy.h"
 #include "Player.h"
-
 #include "ofMain.h"
 
 
@@ -37,6 +37,7 @@ class Coordinator : public ofBaseApp {
 	ofImage backgroundImage_;
 	ofImage currentImage_;
 	Player player_;
+	Enemy testEnemy_;
 	ofSoundPlayer SoundPlayer_;
 };
 
