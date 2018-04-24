@@ -9,7 +9,27 @@
 // This is Coordinator loading all of the game sprites and sound files.
 
 void Coordinator::setup() {
+	//Cited from:
+	// https://github.com/vanderlin/ofxBox2d/blob/master/example-ContactListener/src/ofApp.h
+
+	box2d.init();
+	box2d.enableEvents();
+	box2d.createGround();
+	box2d.setFPS(60.0);
+	box2d.registerGrabbing();
+
+	//add listeners
+	ofAddListener(box2d.contactStartEvents, this, &Coordinator::contactStart);
+	ofAddListener(box2d.contactEndEvents, this, &Coordinator::contactEnd);
+
+
+
+
 	player_.setup();
+
+	
+
+
 	
 	backgroundImage_.load("images/images/backgroundImage.png");
 
@@ -26,6 +46,8 @@ void Coordinator::setup() {
 
 //--------------------------------------------------------------
 void Coordinator::update() {
+
+	testEnemy_.setX(testEnemy_.getX() + kEnemySpeed);
 }
 // Cited from:
 // https://forum.openframeworks.cc/t/background-image-in-openframeworks-app/11731

@@ -81,6 +81,7 @@ Updating a PUSH->Github.com.
 
 Updated images with pictures of a chicken because I couldn't find the owner of the frog's original images. <<b>Royalty creds... </b>>
 
+<b> This is important for next PUSH: https://github.com/vanderlin/ofxBox2d/blob/master/example-ShapeTexturing/src/ofApp.cpp
 
 
 

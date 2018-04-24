@@ -4,7 +4,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include "ofMain.h"
-
+#include "ofxBox2d.h"
 
 class Coordinator : public ofBaseApp {
 	public:
@@ -25,12 +25,23 @@ class Coordinator : public ofBaseApp {
 	void KillPlayer();
 	void EndGame();
 
+	//Cited from:
+	// https://github.com/vanderlin/ofxBox2d/blob/master/example-ContactListener/src/ofApp.h
+
+	// this is the function for contacts
+	void contactStart(ofxBox2dContactArgs &e);
+	void contactEnd(ofxBox2dContactArgs &e);
+
+
 	private:
 	
+	ofxBox2d box2d;
+	vector < shared_ptr<ofxBox2dRectangle> rectangles;
 	Player player_;
 	Enemy testEnemy_;
 	ofSoundPlayer SoundPlayer_;
 	ofImage backgroundImage_;
+	const int kEnemySpeed = 15;
 };
 
 #endif // COORDINATOR_H

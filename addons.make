@@ -1,3 +1,2 @@
-ofx2DFigures
+ofxBox2d
 ofxGui
-ofxVectorGraphics
