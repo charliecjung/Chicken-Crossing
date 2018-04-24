@@ -62,6 +62,15 @@ Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
 <b> Nichola's suggestion for max replacing the move func's logic. </b>
 
+<b> Suggestion for car's to be on the heap </b>
+
+<b> Suggestion for pickup's to be on the heap </b>
+
+<b> Cars should auto destruct off screen and be replaced by a new Enemy object </b>
+
+<b> replace out of boundary should have if and else to account for left and right side </b>
+
+<b> random generator for sign of speed_ </b>
 <h1> 1:02 AM Friday </h1>
 
 After many tribulations of reinstalling VStudio and recloning the project. I realized that deleting the <i> obsolete </i> constructor caused my program to work again.
