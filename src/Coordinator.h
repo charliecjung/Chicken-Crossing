@@ -23,22 +23,14 @@ class Coordinator : public ofBaseApp {
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 	void KillPlayer();
-	void MoveLeft();
-	void MoveRight();
-	void MoveUp();
-	void MoveDown();
 	void EndGame();
 
 	private:
-	ofImage frogUp_;
-	ofImage frogLeft_;
-	ofImage frogRight_;
-	ofImage frogDown_;
-	ofImage backgroundImage_;
-	ofImage currentImage_;
+	
 	Player player_;
 	Enemy testEnemy_;
 	ofSoundPlayer SoundPlayer_;
+	ofImage backgroundImage_;
 };
 
 #endif // COORDINATOR_H

@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "Coordinator.h"
-
+#include "Enemy.h"
 
 #include "ofxGui.h"
 //--------------------------------------------------------------
@@ -9,19 +9,14 @@
 // This is Coordinator loading all of the game sprites and sound files.
 
 void Coordinator::setup() {
-	player_.SetUp();
+	player_.setup();
+	
 	backgroundImage_.load("images/images/backgroundImage.png");
-	frogUp_.load("images/chicken/chicken_up.png");
-	frogLeft_.load("images/chicken/chicken_left.png");
-	frogRight_.load("images/chicken/chicken_right.png");
-	frogDown_.load("images/chicken/chicken_down.png");
-	currentImage_.load("images/chicken/chicken_up.png");
+
 	SoundPlayer_.load("music/backgroundMusic.flac");
 
+	
 	testEnemy_.setup();
-	testEnemy_.LoadImage("images/enemies/Cars/Cars-01-01.png");
-	std::cout << "ID of CAR: " << &testEnemy_.getCurrentImage() << std::endl;
-	testEnemy_.draw();
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
 
@@ -45,13 +40,12 @@ void Coordinator::draw() {
 	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	glPolygonMode(GL_FRONT, GL_FILL);
 
-	// ofDrawBitmapString("X: " + ofToString(player_.getX()), 400, 600);
-	// ofDrawBitmapString("Y: " + ofToString(player_.getY()), 600, 800);
+	ofDrawBitmapString("X: " + ofToString(player_.getX()), 400, 600);
+	ofDrawBitmapString("Y: " + ofToString(player_.getY()), 600, 800);
+	 
+	player_.draw();
+	testEnemy_.draw();
 
-	currentImage_.draw(player_.getX(), player_.getY(), player_.getWidth(), player_.getHeight());
-	if (player_.getY() <= 0) {
-		std::exit(0);
-	}
 }
 
 //--------------------------------------------------------------
@@ -63,16 +57,16 @@ void Coordinator::draw() {
 
 void Coordinator::keyPressed(int key) {
 	if (key == OF_KEY_UP) {
-		MoveUp();
+		player_.MoveUp();
 	}
 	else if (key == OF_KEY_LEFT) {
-		MoveLeft();
+		player_.MoveLeft();
 	}
 	else if (key == OF_KEY_RIGHT) {
-		MoveRight();
+		player_.MoveRight();
 	}
 	else if (key == OF_KEY_DOWN) {
-		MoveDown();
+		player_.MoveDown();
 	}
 	else if (key == 'p') {
 		ofToggleFullscreen();
@@ -140,112 +134,3 @@ void Coordinator::KillPlayer() {
 
 }
 
-//To Preface This:
-// I did some game-testing because I suspected that the ofGetWindowWidth() and ofGetWindowHeight() were actually bigger than 
-// the screen by a small number of pixels (<~10)... so I was able to display the values of screenWidth and screenHeight using
-// ofDrawLine() and was able to make calculations based off of feel.
-
-// Another note is that I chose Coordinator to handle the implementation for move and then hand it off to Player when a key is
-// pressed. 
-
-// This is because I wanted to "sanitize" or check the input of the Player so they aren't changing their x/y position by like
-// 1000 pixels or able to escape the boundaries by modifying my edge cases.
-
-//This way player movement is consistent through all the Player objects
-
-
-void Coordinator::MoveLeft() {
-	
-	// Case for left edge of screen
-
-	// update sprite's image
-	currentImage_ = frogLeft_;
-
-	// futureXPos is x coord + body of sprite.
-
-	int futureXPos = player_.getX() - player_.getSize();
-	if (player_.getX() > 0) {
-
-		// if the future position is to the right of the left boundary, then update position
-
-		player_.setX(futureXPos);
-
-	}
-	else if (futureXPos <= 0) {
-
-		// if we are going out of the screen then trap the player to the left most position.
-
-		player_.setX(0);
-	}
-}
-void Coordinator::MoveRight() {
-
-	// Case for right edge of screen
-
-	//update sprite image
-
-	currentImage_ = frogRight_;
-
-	//updated futureXPos
-
-	int futureXPos = player_.getX() + player_.getSize();
-	if (futureXPos < (ofGetWindowWidth() - (player_.getSize() * 2))) {
-		// This was a tricky edge case where I realized that for the player + body of sprite to touch the boundary of the 
-		// visible screen was actually screenWidth - 100. Therefore, I got the screenWidth - (2*sizeofSprite): sizeOfSprite = 50;
-
-		player_.setX(futureXPos);
-	}
-	else if (futureXPos >= (ofGetWindowWidth() - (player_.getSize() * 2))) {
-
-		// This logic is if the player is beyond the boundary then trap the player within the screen.
-
-		player_.setX((ofGetWindowWidth() - (player_.getSize() * 2)));
-	}
-
-}
-void Coordinator::MoveUp() {
-
-	// Case for top edge of screen
-
-	// update Sprite position
-
-	currentImage_ = frogUp_;
-
-	//update futureYPos
-
-	int futureYPos = player_.getY() - player_.getSize();
-
-	// if the sprite is below the top edge of the screen
-
-	if (futureYPos > 0) {
-		player_.setY(futureYPos);
-	}
-	// if the sprite is beyond the screen, trap it within!
-
-	else if (futureYPos <= 0) {
-		player_.setY(0);
-	}
-
-}
-void Coordinator::MoveDown() {
-	currentImage_ = frogDown_;
-
-	// Case for bottom edge of screen
-
-	//update futureYPos
-
-	int futureYPos = player_.getY() + player_.getSize();
-
-	// This was a tricky edge case where I realized that for the player + body of sprite to touch the boundary of the 
-	// visible screen was actually screenWidth - 100. Therefore, I got the screenWidth - (2*sizeofSprite): sizeOfSprite = 50;
-
-	if (futureYPos < (ofGetWindowHeight() - (player_.getSize() * 2))) {
-		player_.setY(futureYPos);
-	}
-
-	//Same logic applies down below.
-
-	else if (futureYPos >= (ofGetWindowHeight() - (player_.getSize() * 2))) {
-		player_.setY((ofGetWindowHeight() - (player_.getSize() * 2)));
-	}
-}
