@@ -5,6 +5,7 @@
 
 #include <string>
 #include <vector>
+#include <string>
 
 class Enemy: public ofBaseApp {
 	public:
@@ -22,11 +23,10 @@ class Enemy: public ofBaseApp {
 		void setY(int newY);
 		void setSpeed(int newSpeed);
 		void updatePosition(int speedCounter);
-
+		void setCurrentImage(std::string path);
 
 	private:
-		std::vector <Enemy> enemyList;
-		std::vector <Enemy>::iterator enemyIterator;
+		
 		int x_;
 		int y_;
 		int width_;

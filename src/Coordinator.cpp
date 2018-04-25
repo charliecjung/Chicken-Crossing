@@ -3,9 +3,24 @@
 #include "Enemy.h"
 #include "ofMain.h"
 #include "ofxGui.h"
+#include <vector>
 //--------------------------------------------------------------
 
 
+std::vector <Enemy>* Coordinator::createRandomEnemies(int numOfEnemies) {
+	// testEnemy_ = new Enemy(200, 200, 200, 200, 20, 0);
+	std::vector <Enemy>* tempList = new std::vector <Enemy>();
+
+	for (unsigned int i = 0; i < numOfEnemies; i++) {
+		// Cited from:
+		// https://stackoverflow.com/questions/7887941/random-number-from-9-to-9-in-c
+		//rand() negative generation -10 to 10
+		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 200, (rand() % 38) + -18, 0);
+		currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-01.png");
+		tempList->push_back(*currentEnemy);
+	}
+	return tempList;
+}
 // This is Coordinator loading all of the game sprites and sound files.
 
 void Coordinator::setup() {
@@ -17,7 +32,14 @@ void Coordinator::setup() {
 
 	// (int newX, int newY, int newWidth, int newHeight, int newSpeed, int newSpeedMultiplier);
 
-	testEnemy_ = new Enemy(200, 200, 200, 200, 20, 0);
+	//testEnemy_ = new Enemy(200, 200, 200, 200, 20, 0);
+	
+	enemyList_ = createRandomEnemies(5);
+	//images\enemies\Cars
+
+
+	
+
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
 
@@ -27,8 +49,12 @@ void Coordinator::setup() {
 
 //--------------------------------------------------------------
 void Coordinator::update() {
-	doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
 	
+	for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
+	{
+		doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), it->getX(), it->getY(), (it->getX() + it->getWidth()), (it->getY() + it->getHeight()));
+	}
+	KillPlayer();
 	
 	
 }
@@ -42,18 +68,28 @@ void Coordinator::update() {
 //--------------------------------------------------------------
 void Coordinator::draw() {
 	//doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
+
 	glPolygonMode(GL_BACK, GL_FILL);
 	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	glPolygonMode(GL_FRONT, GL_FILL);
+	/*
 	ofDrawBitmapString("Player X: " + ofToString(player_.getX()), 400, 600);
 	ofDrawBitmapString("Player Y: " + ofToString(player_.getY()), 800, 600);
 	ofDrawBitmapString("testEnemy X: " + ofToString(testEnemy_->getX()), 400, 800);
 	ofDrawBitmapString("testEnemy Y: " + ofToString(testEnemy_->getY()), 800, 800);
+	*/
 
 	player_.draw();
-	testEnemy_->draw();
+	// Iterating through a vector using a new iterator
+	// Cited from:
+	// https://stackoverflow.com/questions/12702561/iterate-through-a-c-vector-using-a-for-loop
+	for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
+		{
+			it->draw();
+		}
 
 }
+
 
 //--------------------------------------------------------------
 
@@ -81,8 +117,10 @@ void Coordinator::keyPressed(int key) {
 	}
 	
 	else if (key == OF_KEY_ESC) {
-		delete testEnemy_;
-		testEnemy_ = NULL;
+		delete currentEnemy;
+		currentEnemy = NULL;
+		delete enemyList_;
+		enemyList_ = NULL;
 		std::exit(0);
 	}
 	
@@ -140,13 +178,6 @@ void Coordinator::gotMessage(ofMessage msg) {
 void Coordinator::dragEvent(ofDragInfo dragInfo) {
 
 }
-void Coordinator::EndGame() {
-
-}
-// Future implementation of when the player dies.
-void Coordinator::KillPlayer() {
-
-}
 
 //
 // Referenced from:
@@ -186,11 +217,25 @@ bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, in
 
 		return false;
 	}
-	delete testEnemy_;
-	testEnemy_ = NULL;
+	delete enemyList_;
+	enemyList_ = NULL;
 	std::exit(0);
 	glPolygonMode(GL_FRONT, GL_FILL);
 	ofDrawBitmapString("Intersecting!", 300, 300);
 	return true;
 }
+
+	void Coordinator::KillPlayer() {
+		if (player_.getY() <= 0) {
+			ofSetColor(255, 255, 0);
+			glPolygonMode(GL_FRONT, GL_FILL);
+			std::exit(0);
+		}
+	}
+	void Coordinator::EndGame() {
+
+	}
+	void Coordinator::ResetGame() {
+
+	}
 

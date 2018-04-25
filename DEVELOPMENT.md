@@ -58,13 +58,10 @@ Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
 <h1> Todo List </h1>
 
-<b> Add array of cars </b>
+
 
 <b> Possibly add pickup items </b>
 
-<b> Cars should auto destruct off screen and be replaced by a new Enemy object </b>
-
-<b> replace out of boundary should have if and else to account for left and right side </b>
 
 <b> random generator for sign of speed_ </b>
 <h1> 1:02 AM Friday </h1>
@@ -88,3 +85,7 @@ Updated images with pictures of a chicken because I couldn't find the owner of t
 
 Replaced my Move() functions with std::Max and std::Min's. A whole lot simpler.
 
+<h1> After 12 </h1>
+
+Finished almost the whole game. Should start working on test cases and how to stop the car's speed from becoming 0. Other than that
+we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All done for now!

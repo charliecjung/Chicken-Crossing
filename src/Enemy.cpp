@@ -1,6 +1,8 @@
 
 #include "Enemy.h"
-
+#include <cstdlib>
+#include <vector>
+#include <string>
 
 	Enemy::Enemy() {
 
@@ -14,9 +16,11 @@
 		ifCollided_ = false;
 		speed_ = newSpeed;
 		speedMultiplier_ = newSpeedMultiplier;
-		currentImage_.load("images/enemies/Cars/Cars-01-01.png");
+		
+		
 
 	}
+
 
 	int Enemy::getX() {
 
@@ -46,7 +50,9 @@
 	ofImage Enemy::getCurrentImage() {
 		return currentImage_;
 	}
-	
+	void Enemy::setCurrentImage(std::string path) {
+		currentImage_.load(path);
+	}
 
 	void Enemy::setX(int newX) {
 		x_ = newX;
@@ -76,3 +82,4 @@
 		}
 			x_ = x_ + speed_;
 	}
+	

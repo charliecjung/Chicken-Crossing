@@ -67,9 +67,7 @@ bool Player::isFrogStillAlive() {
 void Player::draw() {
 	glPolygonMode(GL_FRONT, GL_FILL);
 	currentImage_.draw(x_, y_, width_, height_);
-	if (y_ <= 0) {
-		std::exit(0);
-	}
+	
 }
 
 

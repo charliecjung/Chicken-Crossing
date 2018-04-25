@@ -4,6 +4,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include "ofMain.h"
+#include <vector>
 
 class Coordinator : public ofBaseApp {
 	public:
@@ -23,6 +24,8 @@ class Coordinator : public ofBaseApp {
 	void gotMessage(ofMessage msg);
 	void KillPlayer();
 	void EndGame();
+	void ResetGame();
+	std::vector <Enemy>* createRandomEnemies(int numOfEnemies);
 
 	//
 	// Referenced from:
@@ -35,7 +38,10 @@ class Coordinator : public ofBaseApp {
 	bool doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2);
 	private:
 	Player player_;
-	Enemy* testEnemy_;
+	//Enemy* testEnemy_;
+	Enemy* currentEnemy;
+	std::vector <Enemy>* enemyList_ = new std::vector <Enemy>();
+	std::vector <Enemy>::iterator enemyIterator_;
 	ofSoundPlayer SoundPlayer_;
 	ofImage backgroundImage_;
 	
