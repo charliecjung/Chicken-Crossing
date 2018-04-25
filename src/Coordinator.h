@@ -3,6 +3,7 @@
 
 #include "Enemy.h"
 #include "Player.h"
+#include "Pickup.h"
 #include "ofMain.h"
 #include <vector>
 
@@ -44,6 +45,7 @@ class Coordinator : public ofBaseApp {
 	std::vector <Enemy>::iterator enemyIterator_;
 	ofSoundPlayer SoundPlayer_;
 	ofImage backgroundImage_;
+	Pickup powerup1;
 	
 };
 
