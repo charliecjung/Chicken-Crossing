@@ -39,3 +39,6 @@
 	void updatePosition(int speedCounter) {
 
 	}
+	void Pickup::setCurrentImage(std::string path) {
+		currentImage_.load(path);
+	}

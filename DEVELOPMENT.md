@@ -84,16 +84,19 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 
 <h1> Final Tasks </h1>
-random generator for speed
 
-make it so that enemySpeed != 0
+:red_circle: Random() generator for speed
 
-Implement EnemyManager to create Enemy objects
+:red_circle: Ensure that enemySpeed != 0
 
-create powerups
+:red_circle: Implement EnemyManager to create Enemy objects (Wrapper).
 
-draw gameover resetgame
+:red_circle: Create powerups
+
+:red_circle: Implement Gameover() ResetGame(), KillPlayer()
 
 :white_check_mark: std::max and min for Move() logic.
 
 :white_check_mark: moving beyond the screen for the Player (chicken)
+
+:red_circle: Find pickup images from opengameart.org

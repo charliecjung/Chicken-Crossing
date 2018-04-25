@@ -19,9 +19,7 @@
 	}
 
 	int Enemy::getX() {
-
 		return x_;
-
 	}
 	
 	int Enemy::getY() {
@@ -61,14 +59,12 @@
 	}
 	void Enemy::draw() {
 		updatePosition(speedMultiplier_);
-		// glPolygonMode(GL_FRONT, GL_FILL);
 		currentImage_.draw(x_, y_, width_, height_);
 		
 	}
 	
 	void Enemy::updatePosition(int speedCounter) {
 		speed_ += speedCounter;
-
 		if (x_ >= ofGetWindowWidth()) {
 			// then the car is out of the screen
 			x_ = 0;

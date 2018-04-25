@@ -19,6 +19,7 @@ public:
 	void draw();
 	void setX(int newX);
 	void setY(int newY);
+	void setCurrentImage(std::string path);
 
 private:
 

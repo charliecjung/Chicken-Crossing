@@ -20,7 +20,6 @@ class Player {
     const int getEndOfGameYLevel();
     bool isFrogStillAlive();
 	void draw();
-	void LoadImage(std::string imagePath);
 
 	void MoveLeft();
 	void MoveRight();

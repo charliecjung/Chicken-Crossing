@@ -25,7 +25,6 @@ void Player::setup() {
 	// x = (ofGetWindowWidth() / 2) - (size * 2);
 	// y = (ofGetWindowHeight() - (size * 2));
 
-
 	chickenUp_.load("images/chicken/chicken_up.png");
 	chickenLeft_.load("images/chicken/chicken_left.png");
 	chickenRight_.load("images/chicken/chicken_right.png");

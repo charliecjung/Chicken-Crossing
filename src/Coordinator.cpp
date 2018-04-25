@@ -42,7 +42,8 @@ void Coordinator::setup() {
 	//images\enemies\Cars
 
 
-	
+	powerup1 = new Pickup(200, 200, 50, 50);
+	powerup1->setCurrentImage("images/enemies/Cars/Cars-01-01.png");
 
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
@@ -84,6 +85,7 @@ void Coordinator::draw() {
 	*/
 
 	player_.draw();
+	powerup1->draw();
 	// Iterating through a vector using a new iterator
 	// Cited from:
 	// https://stackoverflow.com/questions/12702561/iterate-through-a-c-vector-using-a-for-loop
@@ -121,6 +123,8 @@ void Coordinator::keyPressed(int key) {
 	}
 	
 	else if (key == OF_KEY_ESC) {
+		delete powerup1;
+		powerup1 = NULL;
 		delete currentEnemy;
 		currentEnemy = NULL;
 		delete enemyList_;
