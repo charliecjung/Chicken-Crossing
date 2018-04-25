@@ -58,11 +58,9 @@ Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
 <h1> Todo List </h1>
 
-<b> Frog can go to the right and show up to the left of the screen </b>
+<b> Add array of cars </b>
 
-<b> Suggestion for car's to be on the heap </b>
-
-<b> Suggestion for pickup's to be on the heap </b>
+<b> Possibly add pickup items </b>
 
 <b> Cars should auto destruct off screen and be replaced by a new Enemy object </b>
 
@@ -73,10 +71,6 @@ Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
 After many tribulations of reinstalling VStudio and recloning the project. I realized that deleting the <i> obsolete </i> constructor caused my program to work again.
 I am not entirely sure how my debugging process went but it was extremely exhausting.
-
-<h3> Edits that I will have pushed in the next commit </h3>
-<b> Changing functions to be NormalCamelCase (<i>Thank Google's C++ styling guide </i>) </b>
-<b> Changing the name of ResourceManager to Coordinator (Also have to change the compile name in .vcprojectx </b>
 
 Will be back...
 

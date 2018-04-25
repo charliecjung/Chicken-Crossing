@@ -66,16 +66,13 @@
 	
 	void Enemy::updatePosition(int speedCounter) {
 		speed_ += speedCounter;
-		if (speed_ >= 0) {
-			if (x_ == ofGetWindowWidth()) {
-				// then the car is out of the screen
-				x_ = 0;
-			}
+
+		if (x_ >= ofGetWindowWidth()) {
+			// then the car is out of the screen
+			x_ = 0;
 		}
-		else if (speed_ <= 0) {
-			if (x_ == (0 - (width_ * 2))) {
-				x_ = ofGetWindowWidth();
-			}
+		else if (x_ <= (0 - (width_ * 2))) {
+			x_ = ofGetWindowWidth();
 		}
-		x_ = x_ + speed_;
+			x_ = x_ + speed_;
 	}

@@ -17,7 +17,7 @@ void Coordinator::setup() {
 
 	// (int newX, int newY, int newWidth, int newHeight, int newSpeed, int newSpeedMultiplier);
 
-	testEnemy_ = new Enemy(200, 200, 200, 200, 5, 0);
+	testEnemy_ = new Enemy(900, 900, 200, 200, -20, 0);
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
 
