@@ -15,8 +15,9 @@ void Coordinator::setup() {
 
 	SoundPlayer_.load("music/backgroundMusic.flac");
 
-	
-	testEnemy_.setup();
+	// (int newX, int newY, int newWidth, int newHeight, int newSpeed, int newSpeedMultiplier);
+
+	testEnemy_ = new Enemy(200, 200, 200, 200, 5, 0);
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
 
@@ -26,7 +27,7 @@ void Coordinator::setup() {
 
 //--------------------------------------------------------------
 void Coordinator::update() {
-	//doOverlap(player_.getX(), player_.getY(), (player_.getX()+player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_.getX(), testEnemy_.getY(), (testEnemy_.getX() + testEnemy_.getWidth()), (testEnemy_.getY() + testEnemy_.getHeight()));
+	doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
 	
 	
 	
@@ -40,17 +41,17 @@ void Coordinator::update() {
 
 //--------------------------------------------------------------
 void Coordinator::draw() {
-	doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_.getX(), testEnemy_.getY(), (testEnemy_.getX() + testEnemy_.getWidth()), (testEnemy_.getY() + testEnemy_.getHeight()));
+	//doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
 	glPolygonMode(GL_BACK, GL_FILL);
 	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	glPolygonMode(GL_FRONT, GL_FILL);
 	ofDrawBitmapString("Player X: " + ofToString(player_.getX()), 400, 600);
 	ofDrawBitmapString("Player Y: " + ofToString(player_.getY()), 800, 600);
-	ofDrawBitmapString("testEnemy X: " + ofToString(testEnemy_.getX()), 400, 800);
-	ofDrawBitmapString("testEnemy Y: " + ofToString(testEnemy_.getY()), 800, 800);
-	 
+	ofDrawBitmapString("testEnemy X: " + ofToString(testEnemy_->getX()), 400, 800);
+	ofDrawBitmapString("testEnemy Y: " + ofToString(testEnemy_->getY()), 800, 800);
+
 	player_.draw();
-	testEnemy_.draw();
+	testEnemy_->draw();
 
 }
 
@@ -78,6 +79,13 @@ void Coordinator::keyPressed(int key) {
 		ofToggleFullscreen();
 
 	}
+	
+	else if (key == OF_KEY_ESC) {
+		delete testEnemy_;
+		testEnemy_ = NULL;
+		std::exit(0);
+	}
+	
 	else {
 		std::cout << "Cannot understand your next movement. Please try again." << std::endl;
 	}
@@ -178,6 +186,8 @@ bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, in
 
 		return false;
 	}
+	delete testEnemy_;
+	testEnemy_ = NULL;
 	std::exit(0);
 	glPolygonMode(GL_FRONT, GL_FILL);
 	ofDrawBitmapString("Intersecting!", 300, 300);

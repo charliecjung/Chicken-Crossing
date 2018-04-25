@@ -96,6 +96,10 @@ void Player::MoveLeft() {
 	int futureXPos = x_ - size_;
 
 	x_ = std::max(0, futureXPos);
+
+	if (x_ == 0) {
+		x_ = ofGetWindowWidth() - (size_ * 2);
+	}
 }
 void Player::MoveRight() {
 
@@ -106,6 +110,10 @@ void Player::MoveRight() {
 	int futureXPos = x_ + size_;
 
 	x_ = std::min(futureXPos, (ofGetWindowWidth() - (size_ * 2)));
+
+	if (x_ == (ofGetWindowWidth() - (size_ * 2))) {
+		x_ = 0 - (size_ * 2);
+	}
 }
 void Player::MoveUp() {
 

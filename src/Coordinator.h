@@ -35,7 +35,7 @@ class Coordinator : public ofBaseApp {
 	bool doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2);
 	private:
 	Player player_;
-	Enemy testEnemy_;
+	Enemy* testEnemy_;
 	ofSoundPlayer SoundPlayer_;
 	ofImage backgroundImage_;
 	
