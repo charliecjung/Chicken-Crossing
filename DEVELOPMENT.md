@@ -56,14 +56,6 @@ Background Image: www.davidstenfors.com
 
 Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
-<h1> Todo List </h1>
-
-
-
-<b> Possibly add pickup items </b>
-
-
-<b> random generator for sign of speed_ </b>
 <h1> 1:02 AM Friday </h1>
 
 After many tribulations of reinstalling VStudio and recloning the project. I realized that deleting the <i> obsolete </i> constructor caused my program to work again.
@@ -92,7 +84,16 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 
 <h1> Final Tasks </h1>
+random generator for speed
+
 make it so that enemySpeed != 0
+
 Implement EnemyManager to create Enemy objects
+
 create powerups
+
 draw gameover resetgame
+
+:white_check_mark: std::max and min for Move() logic.
+
+:white_check_mark: moving beyond the screen for the Player (chicken)
