@@ -89,38 +89,15 @@ void Player::draw() {
 
 void Player::MoveLeft() {
 
-	// Case for left edge of screen
-
-	// update sprite's image
 	currentImage_ = chickenLeft_;
 
 	// futureXPos is x coord + body of sprite.
 	
 	int futureXPos = x_ - size_;
 
-	//x_ = std::max(0, futureXPos);
-	
-	if (x_ > 0) {
-
-		// if the future position is to the right of the left boundary, then update position
-
-		x_ = futureXPos;
-		
-
-	}
-	else if (futureXPos <= 0) {
-
-		// if we are going out of the screen then trap the player to the left most position.
-
-		x_ = 0;
-	}
-	
+	x_ = std::max(0, futureXPos);
 }
 void Player::MoveRight() {
-
-	// Case for right edge of screen
-
-	//update sprite image
 
 	currentImage_ = chickenRight_;
 
@@ -128,67 +105,25 @@ void Player::MoveRight() {
 
 	int futureXPos = x_ + size_;
 
-	if (futureXPos < (ofGetWindowWidth() - (size_ * 2))) {
-		// This was a tricky edge case where I realized that for the player + body of sprite to touch the boundary of the 
-		// visible screen was actually screenWidth - 100. Therefore, I got the screenWidth - (2*sizeofSprite): sizeOfSprite = 50;
-
-		x_ = futureXPos;
-	}
-	else if (futureXPos >= (ofGetWindowWidth() - (size_ * 2))) {
-
-		// This logic is if the player is beyond the boundary then trap the player within the screen.
-
-		x_ = (ofGetWindowWidth() - (size_ * 2));
-	}
-
+	x_ = std::min(futureXPos, (ofGetWindowWidth() - (size_ * 2)));
 }
 void Player::MoveUp() {
 
-	// Case for top edge of screen
-
-	// update Sprite position
-
 	currentImage_ = chickenUp_;
 
-	//update futureYPos
-
 	int futureYPos = y_ - size_;
-
-	// if the sprite is below the top edge of the screen
-
-	if (futureYPos > 0) {
-
-		y_ = futureYPos;
-	
-	}
-	// if the sprite is beyond the screen, trap it within!
-
-	else if (futureYPos <= 0) {
-		y_ = 0;
-	}
-
+	y_ = std::max(futureYPos, 0);
 }
 void Player::MoveDown() {
 	currentImage_ = chickenDown_;
-
-	// Case for bottom edge of screen
-
-	//update futureYPos
 
 	int futureYPos = y_ + size_;
 
 	// This was a tricky edge case where I realized that for the player + body of sprite to touch the boundary of the 
 	// visible screen was actually screenWidth - 100. Therefore, I got the screenWidth - (2*sizeofSprite): sizeOfSprite = 50;
+	
+	y_ = std::min(futureYPos, (ofGetWindowHeight() - (size_ * 2)));
 
-	if (futureYPos < (ofGetWindowHeight() - (size_ * 2))) {
-		y_ = futureYPos;
-	}
-
-	//Same logic applies down below.
-
-	else if (futureYPos >= (ofGetWindowHeight() - (size_ * 2))) {
-		y_ = (ofGetWindowHeight() - (size_ * 2));
-	}
 }
 
 ofImage Player::getChickenUp() {

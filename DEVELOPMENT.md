@@ -60,8 +60,6 @@ Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
 <b> Frog can go to the right and show up to the left of the screen </b>
 
-<b> Nichola's suggestion for max replacing the move func's logic. </b>
-
 <b> Suggestion for car's to be on the heap </b>
 
 <b> Suggestion for pickup's to be on the heap </b>
@@ -92,7 +90,7 @@ Updated images with pictures of a chicken because I couldn't find the owner of t
 
 <b> This is important for next PUSH: https://github.com/vanderlin/ofxBox2d/blob/master/example-ShapeTexturing/src/ofApp.cpp
 
+<h1> April 24, 2018 10:46 PM (Tuesday) </h1>
 
-
-
+Replaced my Move() functions with std::Max and std::Min's. A whole lot simpler.
 
