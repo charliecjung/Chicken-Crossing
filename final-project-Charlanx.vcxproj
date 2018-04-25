@@ -172,6 +172,8 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Pickup.cpp" />
+    <ClCompile Include="PickupManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Coordinator.cpp" />
     <ClCompile Include="src\Enemy.cpp" />
@@ -187,6 +189,8 @@
     <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxToggle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Pickup.h" />
+    <ClInclude Include="PickupManager.h" />
     <ClInclude Include="src\Coordinator.h" />
     <ClInclude Include="src\Enemy.h" />
     <ClInclude Include="src\EnemyManager.h" />

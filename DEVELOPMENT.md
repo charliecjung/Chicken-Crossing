@@ -92,7 +92,7 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 
 <h1> Final Tasks </h1>
-
+make it so that enemySpeed != 0
 Implement EnemyManager to create Enemy objects
 create powerups
 draw gameover resetgame
