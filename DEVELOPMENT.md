@@ -89,3 +89,10 @@ Replaced my Move() functions with std::Max and std::Min's. A whole lot simpler.
 
 Finished almost the whole game. Should start working on test cases and how to stop the car's speed from becoming 0. Other than that
 we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All done for now!
+
+
+<h1> Final Tasks </h1>
+
+Implement EnemyManager to create Enemy objects
+create powerups
+draw gameover resetgame

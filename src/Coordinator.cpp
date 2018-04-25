@@ -16,8 +16,12 @@ std::vector <Enemy>* Coordinator::createRandomEnemies(int numOfEnemies) {
 		// https://stackoverflow.com/questions/7887941/random-number-from-9-to-9-in-c
 		//rand() negative generation -10 to 10
 		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 200, (rand() % 38) + -18, 0);
-		currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-01.png");
+		int randomInt = (rand() % 4);
+		int randomSecondInt = (rand() % 8);
+ 		currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
 		tempList->push_back(*currentEnemy);
+		delete currentEnemy;
+		currentEnemy = NULL;
 	}
 	return tempList;
 }

@@ -16,11 +16,7 @@
 		ifCollided_ = false;
 		speed_ = newSpeed;
 		speedMultiplier_ = newSpeedMultiplier;
-		
-		
-
 	}
-
 
 	int Enemy::getX() {
 
