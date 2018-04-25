@@ -4,6 +4,7 @@
 #include "ofMain.h"
 
 #include <string>
+#include <vector>
 
 class Enemy: public ofBaseApp {
 	public:
@@ -24,6 +25,8 @@ class Enemy: public ofBaseApp {
 
 
 	private:
+		std::vector <Enemy> enemyList;
+		std::vector <Enemy>::iterator enemyIterator;
 		int x_;
 		int y_;
 		int width_;
