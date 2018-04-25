@@ -97,6 +97,9 @@ void Player::MoveLeft() {
 	// futureXPos is x coord + body of sprite.
 	
 	int futureXPos = x_ - size_;
+
+	//x_ = std::max(0, futureXPos);
+	
 	if (x_ > 0) {
 
 		// if the future position is to the right of the left boundary, then update position
@@ -111,6 +114,7 @@ void Player::MoveLeft() {
 
 		x_ = 0;
 	}
+	
 }
 void Player::MoveRight() {
 

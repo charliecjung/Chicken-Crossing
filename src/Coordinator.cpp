@@ -16,7 +16,7 @@ void Coordinator::setup() {
 	SoundPlayer_.load("music/backgroundMusic.flac");
 
 	
-	setup();
+	testEnemy_.setup();
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
 
