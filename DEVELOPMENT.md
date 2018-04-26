@@ -37,25 +37,6 @@ This next week, I will try to add enemies such as cars and maybe use sorting alg
 Documented more code. Freshened up comments. Created "F1" commit for first final "commit".
 
 
-
-
-<b> Creative Commons: </b>
-https://creativecommons.org/licenses/by-nc/3.0/
-
-Frog attribution: https://opengameart.org/node/76895
-By <b> Shepardskin </b>: https://twitter.com/Shepardskin
-"Remix of Chicken by Shepardskin"
-to be used in Chick by Stendhal.
-
-
-Background Remix: https://freesound.org/people/Timbre/sounds/424028/
-
-Original Background Sound: https://freesound.org/people/Suburbanwizard/sounds/423294/
-
-Background Image: www.davidstenfors.com
-
-Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
-
 <h1> 1:02 AM Friday </h1>
 
 After many tribulations of reinstalling VStudio and recloning the project. I realized that deleting the <i> obsolete </i> constructor caused my program to work again.
@@ -108,3 +89,27 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 :heavy_check_mark: moving beyond the screen for the Player (chicken)
 
 :heavy_exclamation_mark: Make several levels. (Need to find more background images).
+
+
+<h1> Credits: </h1>
+
+<b> Creative Commons: </b>
+https://creativecommons.org/licenses/by-nc/3.0/
+
+Frog attribution: https://opengameart.org/node/76895
+By <b> Shepardskin </b>: https://twitter.com/Shepardskin
+"Remix of Chicken by Shepardskin"
+to be used in Chick by Stendhal.
+
+
+Background Remix: https://freesound.org/people/Timbre/sounds/424028/
+
+Original Background Sound: https://freesound.org/people/Suburbanwizard/sounds/423294/
+
+Background Image: www.davidstenfors.com
+
+Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
+
+Powerup Items supplied by Ravenmore: (His portfolio site: http://dycha.net
+
+

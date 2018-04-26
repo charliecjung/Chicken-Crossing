@@ -15,14 +15,24 @@ std::vector <Enemy>* Coordinator::createRandomEnemies(int numOfEnemies) {
 		// Cited from:
 		// https://stackoverflow.com/questions/7887941/random-number-from-9-to-9-in-c
 		//rand() negative generation -10 to 10
-		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 200, (rand() % 38) + -18, 0);
+		int randomNumber = (rand() % 38) - 18;
+		if (randomNumber == 0) {
+			int anotherRandom = rand() % 1;
+			if (anotherRandom == 1) {
+				randomNumber = std::min(randomNumber, -5);
+			}
+			else if (anotherRandom == 0) {
+				randomNumber = std::max(5, randomNumber);
+			}
+		}
+		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 200, randomNumber, 0);
 		int randomInt = (rand() % 4);
 		int randomSecondInt = (rand() % 8);
  		//currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
 		currentEnemy->getCurrentImage().load("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
 		tempList->push_back(*currentEnemy);
-		delete currentEnemy;
-		currentEnemy = NULL;
+		//delete currentEnemy;
+		//currentEnemy = NULL;
 	}
 	return tempList;
 }
@@ -43,8 +53,8 @@ void Coordinator::setup() {
 	//images\enemies\Cars
 
 
-	powerup1 = new Pickup(200, 200, 50, 50);
-	powerup1->setCurrentImage("images/enemies/Cars/Cars-01-01.png");
+	powerup1 = new Pickup(200, 200, 200, 200);
+	powerup1->setCurrentImage("images/powerups/potionBlue.png");
 
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
