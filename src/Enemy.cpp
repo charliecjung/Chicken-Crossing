@@ -41,7 +41,7 @@
 	int Enemy::getSpeed() {
 		return speed_;
 	}
-	ofImage Enemy::getCurrentImage() {
+	ofImage& Enemy::getCurrentImage() {
 		return currentImage_;
 	}
 	void Enemy::setCurrentImage(std::string path) {

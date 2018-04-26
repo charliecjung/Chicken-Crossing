@@ -16,7 +16,7 @@ class Enemy: public ofBaseApp {
 		int getHeight();
 		bool didCollide();
 		int getSpeed();
-		ofImage getCurrentImage();
+		ofImage& getCurrentImage();
 		Enemy(int newX, int newY, int newWidth, int newHeight, int newSpeed, int newSpeedMultiplier);
 		void draw();
 		void setX(int newX);

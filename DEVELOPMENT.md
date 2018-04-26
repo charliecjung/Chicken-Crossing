@@ -85,18 +85,26 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 <h1> Final Tasks </h1>
 
-:red_circle: Random() generator for speed
 
-:red_circle: Ensure that enemySpeed != 0
+:heavy_exclamation_mark: Change <Enemy> to <Enemy*>
 
-:red_circle: Implement EnemyManager to create Enemy objects (Wrapper).
+:heavy_exclamation_mark: check getter and setter whether they should be public or private
 
-:red_circle: Create powerups
+:heavy_exclamation_mark: Random() generator for speed
 
-:red_circle: Implement Gameover() ResetGame(), KillPlayer()
+:heavy_exclamation_mark: Ensure that enemySpeed != 0
 
-:white_check_mark: std::max and min for Move() logic.
+:heavy_exclamation_mark: Implement EnemyManager to create Enemy objects (Wrapper).
 
-:white_check_mark: moving beyond the screen for the Player (chicken)
+:heavy_exclamation_mark: Create powerups
 
-:red_circle: Find pickup images from opengameart.org
+:heavy_exclamation_mark: Implement Gameover() ResetGame(), KillPlayer()
+
+:heavy_exclamation_mark: Find pickup images from opengameart.org
+
+
+:heavy_check_mark: std::max and min for Move() logic.
+
+:heavy_check_mark: moving beyond the screen for the Player (chicken)
+
+:heavy_exclamation_mark: Make several levels. (Need to find more background images).
