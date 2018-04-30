@@ -137,7 +137,7 @@ void Coordinator::keyPressed(int key) {
 		currentEnemy = NULL;
 		delete enemyList_;
 		enemyList_ = NULL;
-		std::exit(0);
+		isGameOver = true;
 	}
 	
 	else {
@@ -227,7 +227,7 @@ bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, in
 	}
 	*/
 	if ((leftX1 > rightX2 || leftX2 > rightX1) || (leftY1 > rightY2 || leftY2 > rightY1)) {
-		//std::exit(0);
+		//isGameOver = true;
 		glPolygonMode(GL_FRONT, GL_FILL);
 		ofDrawBitmapString("Not Intersecting!", 200, 200);
 
@@ -235,7 +235,7 @@ bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, in
 	}
 	delete enemyList_;
 	enemyList_ = NULL;
-	std::exit(0);
+	isGameOver = true;
 	glPolygonMode(GL_FRONT, GL_FILL);
 	ofDrawBitmapString("Intersecting!", 300, 300);
 	return true;
@@ -250,13 +250,18 @@ bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, in
 		if (player_.getY() <= 0) {
 			ofSetColor(255, 255, 0);
 			glPolygonMode(GL_FRONT, GL_FILL);
-			std::exit(0);
+			isGameOver = true;
 		}
 	}
 	void Coordinator::GameOver() {
+		if (isGameOver) {
+			std::cout << "Game Over" << std::endl;
+			//Just freeze everything; don't std::exit();
+		}
 
 	}
 	void Coordinator::ResetGame() {
+		isGameOver = false;
 
 	}
 

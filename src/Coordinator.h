@@ -40,6 +40,7 @@ class Coordinator : public ofBaseApp {
 	// r2 : Bottom Right coordinate of second rectangle.
 	bool doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2);
 	private:
+	bool isGameOver;
 	Player player_;
 	//Enemy* testEnemy_;
 	Enemy* currentEnemy;
