@@ -7,36 +7,6 @@
 //--------------------------------------------------------------
 
 
-std::vector <Enemy>* Coordinator::createRandomEnemies(int numOfEnemies) {
-	// testEnemy_ = new Enemy(200, 200, 200, 200, 20, 0);
-	std::vector <Enemy>* tempList = new std::vector <Enemy>();
-
-	for (unsigned int i = 0; i < numOfEnemies; i++) {
-		// Cited from:
-		// https://stackoverflow.com/questions/7887941/random-number-from-9-to-9-in-c
-		//rand() negative generation -10 to 10
-		int randomNumber = ((rand() % 60) - 30);
-		if (randomNumber == 0) {
-			int anotherRandom = rand() % 1;
-			randomNumber = ((rand() % 60) - 30);
-			if (anotherRandom == 1) {
-				randomNumber = std::min(randomNumber, -11);
-			}
-			else if (anotherRandom == 0) {
-				randomNumber = std::max(11, randomNumber);
-			}
-		}
-		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 150, randomNumber, 0);
-		int randomInt = (rand() % 4);
-		int randomSecondInt = (rand() % 8);
- 		//currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
-		currentEnemy->getCurrentImage().load("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
-		tempList->push_back(*currentEnemy);
-		//delete currentEnemy;
-		//currentEnemy = NULL;
-	}
-	return tempList;
-}
 // This is Coordinator loading all of the game sprites and sound files.
 
 void Coordinator::setup() {
@@ -145,101 +115,6 @@ void Coordinator::keyPressed(int key) {
 	}
 }
 
-//--------------------------------------------------------------
-void Coordinator::keyReleased(int key) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::mouseMoved(int x, int y) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::mouseDragged(int x, int y, int button) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::mousePressed(int x, int y, int button) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::mouseReleased(int x, int y, int button) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::mouseEntered(int x, int y) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::mouseExited(int x, int y) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::windowResized(int w, int h) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::gotMessage(ofMessage msg) {
-
-}
-
-//--------------------------------------------------------------
-void Coordinator::dragEvent(ofDragInfo dragInfo) {
-
-}
-
-//
-// Referenced from:
-// https://www.geeksforgeeks.org/find-two-rectangles-overlap/
-
-// l1: Top Left coordinate of first rectangle.
-// r1: Bottom Right coordinate of first rectangle.
-// l2 : Top Left coordinate of second rectangle.
-// r2 : Bottom Right coordinate of second rectangle.
-
-
-// Cited for intersection of two rectangle's logic:
-// https://www.geeksforgeeks.org/find-two-rectangles-overlap/
-bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2) {
-	
-	/*
-	if (leftX1 > rightX2 || leftX2 > rightX1) {
-		//ofSetColor(255, 0, 0);
-		glPolygonMode(GL_FRONT, GL_FILL);
-		ofDrawBitmapString("Not Intersecting", 100, 100);
-		
-		return false;
-	}
-
-	if (leftY1 < rightY2 || leftY2 < rightY1) {
-		
-		glPolygonMode(GL_FRONT, GL_FILL);
-		ofDrawBitmapString("Not Intersecting!", 200, 200);
-		
-		return false;
-	}
-	*/
-	if ((leftX1 > rightX2 || leftX2 > rightX1) || (leftY1 > rightY2 || leftY2 > rightY1)) {
-		//isGameOver = true;
-		glPolygonMode(GL_FRONT, GL_FILL);
-		ofDrawBitmapString("Not Intersecting!", 200, 200);
-
-		return false;
-	}
-	delete enemyList_;
-	enemyList_ = NULL;
-	isGameOver = true;
-	glPolygonMode(GL_FRONT, GL_FILL);
-	ofDrawBitmapString("Intersecting!", 300, 300);
-	return true;
-}
 
 	void Coordinator::KillPlayer() {
 		for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
