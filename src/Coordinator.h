@@ -26,7 +26,7 @@ class Coordinator : public ofBaseApp {
 	void gotMessage(ofMessage msg);
 
 	void KillPlayer();
-	void EndGame();
+	void GameOver();
 	void ResetGame();
 	std::vector <Enemy>* createRandomEnemies(int numOfEnemies);
 

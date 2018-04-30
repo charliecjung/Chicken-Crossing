@@ -81,8 +81,7 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_exclamation_mark: Implement Gameover() ResetGame(), KillPlayer()
 
-:heavy_exclamation_mark: Find pickup images from opengameart.org
-
+:heavy_check_mark: Find pickup images from opengameart.org
 
 :heavy_check_mark: std::max and min for Move() logic.
 
@@ -110,6 +109,9 @@ Background Image: www.davidstenfors.com
 
 Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
-Powerup Items supplied by Ravenmore: (His portfolio site: http://dycha.net
+Powerup Items supplied by Ravenmore: https://opengameart.org/content/fantasy-icon-pack-by-ravenmore-0
+(His portfolio site: http://dycha.net)
+
+
 
 

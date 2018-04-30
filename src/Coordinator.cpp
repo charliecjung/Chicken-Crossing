@@ -15,17 +15,18 @@ std::vector <Enemy>* Coordinator::createRandomEnemies(int numOfEnemies) {
 		// Cited from:
 		// https://stackoverflow.com/questions/7887941/random-number-from-9-to-9-in-c
 		//rand() negative generation -10 to 10
-		int randomNumber = (rand() % 38) - 18;
+		int randomNumber = ((rand() % 60) - 30);
 		if (randomNumber == 0) {
 			int anotherRandom = rand() % 1;
+			randomNumber = ((rand() % 60) - 30);
 			if (anotherRandom == 1) {
-				randomNumber = std::min(randomNumber, -5);
+				randomNumber = std::min(randomNumber, -11);
 			}
 			else if (anotherRandom == 0) {
-				randomNumber = std::max(5, randomNumber);
+				randomNumber = std::max(11, randomNumber);
 			}
 		}
-		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 200, randomNumber, 0);
+		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 150, randomNumber, 0);
 		int randomInt = (rand() % 4);
 		int randomSecondInt = (rand() % 8);
  		//currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
@@ -50,7 +51,6 @@ void Coordinator::setup() {
 	//testEnemy_ = new Enemy(200, 200, 200, 200, 20, 0);
 	
 	enemyList_ = createRandomEnemies(5);
-	//images\enemies\Cars
 
 
 	powerup1 = new Pickup(200, 200, 200, 200);
@@ -65,11 +65,6 @@ void Coordinator::setup() {
 
 //--------------------------------------------------------------
 void Coordinator::update() {
-	
-	for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
-	{
-		doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), it->getX(), it->getY(), (it->getX() + it->getWidth()), (it->getY() + it->getHeight()));
-	}
 	KillPlayer();
 	
 	
@@ -83,13 +78,14 @@ void Coordinator::update() {
 
 //--------------------------------------------------------------
 void Coordinator::draw() {
+	std::cout << "FPS: " + ofToString(ofGetFrameRate()) << std::endl;
 	//doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
 
 	glPolygonMode(GL_BACK, GL_FILL);
 	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	glPolygonMode(GL_FRONT, GL_FILL);
 	/*
-	ofDrawBitmapString("Player X: " + ofToString(player_.getX()), 400, 600);
+	ofDrawBitmapString("Player X: " + ofToStri`ng(player_.getX()), 400, 600);
 	ofDrawBitmapString("Player Y: " + ofToString(player_.getY()), 800, 600);
 	ofDrawBitmapString("testEnemy X: " + ofToString(testEnemy_->getX()), 400, 800);
 	ofDrawBitmapString("testEnemy Y: " + ofToString(testEnemy_->getY()), 800, 800);
@@ -100,11 +96,12 @@ void Coordinator::draw() {
 	// Iterating through a vector using a new iterator
 	// Cited from:
 	// https://stackoverflow.com/questions/12702561/iterate-through-a-c-vector-using-a-for-loop
+	
 	for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
 		{
 			it->draw();
 		}
-
+		
 }
 
 
@@ -245,13 +242,18 @@ bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, in
 }
 
 	void Coordinator::KillPlayer() {
+		for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
+		{
+			doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), it->getX(), it->getY(), (it->getX() + it->getWidth()), (it->getY() + it->getHeight()));
+		}
+
 		if (player_.getY() <= 0) {
 			ofSetColor(255, 255, 0);
 			glPolygonMode(GL_FRONT, GL_FILL);
 			std::exit(0);
 		}
 	}
-	void Coordinator::EndGame() {
+	void Coordinator::GameOver() {
 
 	}
 	void Coordinator::ResetGame() {
