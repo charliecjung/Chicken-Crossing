@@ -71,15 +71,13 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_exclamation_mark: check getter and setter whether they should be public or private
 
-:heavy_exclamation_mark: Random() generator for speed
-
-:heavy_exclamation_mark: Ensure that enemySpeed != 0
-
 :heavy_exclamation_mark: Implement EnemyManager to create Enemy objects (Wrapper).
 
 :heavy_exclamation_mark: Create powerups
 
 :heavy_exclamation_mark: Implement Gameover() ResetGame(), KillPlayer()
+
+:heavy_exclamation_mark: Make several levels. (Need to find more background images).
 
 :heavy_check_mark: Find pickup images from opengameart.org
 
@@ -87,7 +85,11 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_check_mark: moving beyond the screen for the Player (chicken)
 
-:heavy_exclamation_mark: Make several levels. (Need to find more background images).
+:heavy_check_mark: Random() generator for speed
+
+:heavy_check_mark: Ensure that enemySpeed != 0
+
+
 
 
 <h1> Credits: </h1>
