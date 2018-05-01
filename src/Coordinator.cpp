@@ -18,9 +18,10 @@ void Coordinator::setup() {
 	
 	
 	eManager.SetUp();
-
+	/*
 	powerup1 = new Pickup(200, 200, 200, 200);
 	powerup1->setCurrentImage("images/powerups/potionBlue.png");
+	*/
 
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
@@ -50,15 +51,11 @@ void Coordinator::draw() {
 	glPolygonMode(GL_BACK, GL_FILL);
 	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	glPolygonMode(GL_FRONT, GL_FILL);
-	/*
-	ofDrawBitmapString("Player X: " + ofToStri`ng(player_.getX()), 400, 600);
-	ofDrawBitmapString("Player Y: " + ofToString(player_.getY()), 800, 600);
-	ofDrawBitmapString("testEnemy X: " + ofToString(testEnemy_->getX()), 400, 800);
-	ofDrawBitmapString("testEnemy Y: " + ofToString(testEnemy_->getY()), 800, 800);
-	*/
 
 	player_.draw();
+	/*
 	powerup1->draw();
+	*/
 	eManager.draw();
 		
 }

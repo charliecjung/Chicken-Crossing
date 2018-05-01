@@ -13,7 +13,7 @@ public:
 
 private:
 	std::vector <Enemy*> createRandomEnemies(int numOfEnemies);
-	std::vector <Enemy*> enemyList_ = new std::vector <Enemy>();
+	std::vector <Enemy*> enemyList_;
 	Enemy* currentEnemy;
 
 };
