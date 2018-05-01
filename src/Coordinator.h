@@ -1,9 +1,9 @@
 #ifndef COORDINATOR_H
 #define COORDINATOR_H
 
-#include "Enemy.h"
+#include "EnemyManager.h"
+#include "PickupManager.h"
 #include "Player.h"
-#include "Pickup.h"
 #include "ofMain.h"
 #include <vector>
 
@@ -12,23 +12,11 @@ class Coordinator : public ofBaseApp {
 	void setup();
 	void update();
 	void draw();
-
 	void keyPressed(int key);
-	void keyReleased(int key);
-	void mouseMoved(int x, int y);
-	void mouseDragged(int x, int y, int button);
-	void mousePressed(int x, int y, int button);
-	void mouseReleased(int x, int y, int button);
-	void mouseEntered(int x, int y);
-	void mouseExited(int x, int y);
-	void windowResized(int w, int h);
-	void dragEvent(ofDragInfo dragInfo);
-	void gotMessage(ofMessage msg);
-
 	void KillPlayer();
 	void GameOver();
 	void ResetGame();
-	std::vector <Enemy>* createRandomEnemies(int numOfEnemies);
+
 
 	//
 	// Referenced from:
@@ -38,17 +26,15 @@ class Coordinator : public ofBaseApp {
 	// r1: Bottom Right coordinate of first rectangle.
 	// l2 : Top Left coordinate of second rectangle.
 	// r2 : Bottom Right coordinate of second rectangle.
-	bool doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2);
+	
 	private:
 	bool isGameOver;
 	Player player_;
-	//Enemy* testEnemy_;
-	Enemy* currentEnemy;
-	std::vector <Enemy>* enemyList_ = new std::vector <Enemy>();
-	std::vector <Enemy>::iterator enemyIterator_;
 	ofSoundPlayer SoundPlayer_;
 	ofImage backgroundImage_;
-	Pickup* powerup1;
+	PickupManager pManager;
+	EnemyManager eManager;
+
 	
 };
 

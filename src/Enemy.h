@@ -24,6 +24,7 @@ class Enemy: public ofBaseApp {
 		void setSpeed(int newSpeed);
 		void updatePosition(int speedCounter);
 		void setCurrentImage(std::string path);
+		bool doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2);
 
 	private:
 		
@@ -35,6 +36,7 @@ class Enemy: public ofBaseApp {
 		int speed_;
 		ofImage currentImage_;
 		int speedMultiplier_;
+		
 };
 
 #endif //ENEMY_H

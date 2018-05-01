@@ -79,6 +79,10 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_exclamation_mark: Make several levels. (Need to find more background images).
 
+:heavy_exclamation_mark: Add methods to delete pointers.
+
+:heavy_exclamation_mark: enemyList, powerup1, currentEnemy, enemyList_
+
 :heavy_check_mark: Find pickup images from opengameart.org
 
 :heavy_check_mark: std::max and min for Move() logic.

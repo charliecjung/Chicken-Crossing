@@ -50,9 +50,6 @@ int Player::getSize() {
 int Player::getHeight() {
 	return height_;
 }
-const int Player::getEndOfGameYLevel() {
-	return kEndOfGameYLevel_;
-}
 void Player::setX(int newX) {
 	x_ = newX;
 }

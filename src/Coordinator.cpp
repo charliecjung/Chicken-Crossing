@@ -15,13 +15,9 @@ void Coordinator::setup() {
 	backgroundImage_.load("images/images/backgroundImage.png");
 
 	SoundPlayer_.load("music/backgroundMusic.flac");
-
-	// (int newX, int newY, int newWidth, int newHeight, int newSpeed, int newSpeedMultiplier);
-
-	//testEnemy_ = new Enemy(200, 200, 200, 200, 20, 0);
 	
-	enemyList_ = createRandomEnemies(5);
-
+	
+	eManager.SetUp();
 
 	powerup1 = new Pickup(200, 200, 200, 200);
 	powerup1->setCurrentImage("images/powerups/potionBlue.png");
@@ -63,14 +59,7 @@ void Coordinator::draw() {
 
 	player_.draw();
 	powerup1->draw();
-	// Iterating through a vector using a new iterator
-	// Cited from:
-	// https://stackoverflow.com/questions/12702561/iterate-through-a-c-vector-using-a-for-loop
-	
-	for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
-		{
-			it->draw();
-		}
+	eManager.draw();
 		
 }
 
@@ -101,12 +90,14 @@ void Coordinator::keyPressed(int key) {
 	}
 	
 	else if (key == OF_KEY_ESC) {
+		/*
 		delete powerup1;
 		powerup1 = NULL;
 		delete currentEnemy;
 		currentEnemy = NULL;
 		delete enemyList_;
 		enemyList_ = NULL;
+		*/
 		isGameOver = true;
 	}
 	
@@ -117,10 +108,7 @@ void Coordinator::keyPressed(int key) {
 
 
 	void Coordinator::KillPlayer() {
-		for (std::vector<Enemy>::iterator it = enemyList_->begin(); it != enemyList_->end(); ++it)
-		{
-			doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), it->getX(), it->getY(), (it->getX() + it->getWidth()), (it->getY() + it->getHeight()));
-		}
+		eManager.checkCollision(player_);
 
 		if (player_.getY() <= 0) {
 			ofSetColor(255, 255, 0);

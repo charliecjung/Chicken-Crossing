@@ -87,7 +87,7 @@
 
 	// Cited for intersection of two rectangle's logic:
 	// https://www.geeksforgeeks.org/find-two-rectangles-overlap/
-	bool Coordinator::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2) {
+	bool Enemy::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2) {
 
 		/*
 		if (leftX1 > rightX2 || leftX2 > rightX1) {
@@ -113,9 +113,11 @@
 
 			return false;
 		}
+		/*
 		delete enemyList_;
 		enemyList_ = NULL;
-		isGameOver = true;
+		*/
+		return true;
 		glPolygonMode(GL_FRONT, GL_FILL);
 		ofDrawBitmapString("Intersecting!", 300, 300);
 		return true;

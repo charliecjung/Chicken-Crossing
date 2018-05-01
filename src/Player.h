@@ -17,7 +17,6 @@ class Player {
     void setX(int newX);
     void setY(int newY);
     void setup();
-    const int getEndOfGameYLevel();
     bool isFrogStillAlive();
 	void draw();
 
@@ -44,9 +43,6 @@ class Player {
 	ofImage chickenRight_;
 	ofImage chickenDown_;
 	ofImage currentImage_;
-
-    // kEndOfGameYLevel_ is simply when the player hits y = 0 (The frog crosses the road).
-    const int kEndOfGameYLevel_ = 0;
     bool isAlive_;
 };
 #endif // PLAYER_H
