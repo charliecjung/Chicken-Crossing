@@ -69,6 +69,8 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_exclamation_mark: Add win message.
 
+:heavy_exclamation_mark: Get rid of hardcoded constants
+
 :heavy_exclamation_mark: Make Test cases
 
 :heavy_exclamation_mark: Make makefile and create README.md
