@@ -2,7 +2,7 @@
 
 <h1> Chicken Crossing </h1>
 
-Hello $USER,
+Hello,
 
 
 Here are the instructions to your game:

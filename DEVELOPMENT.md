@@ -71,11 +71,9 @@ I finished a lot of things. such as cleaning up pointers (delete): organizing
 hard code constants, etc... I might tidy up the code later but I need to make
 a makefile and make some test cases.
 
+Done.
 <h1> Final Tasks </h1>
 
-:heavy_exclamation_mark: Make Test cases
-
-:heavy_exclamation_mark: Make makefile and create README.md
 
 :heavy_check_mark: Add methods to delete pointers.
 
