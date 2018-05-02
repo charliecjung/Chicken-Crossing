@@ -18,6 +18,7 @@ class Player {
     void setY(int newY);
     void setup();
 	void draw();
+	bool getAliveStatus();
 
 	void MoveLeft();
 	void MoveRight();
@@ -31,12 +32,14 @@ class Player {
 	void loadBaseImages();
 
     private:
+		int fixedWindowWidth_;
+		int fixedWindowHeight_;
+		int width_;
+		int height_;
+		int size_;
 
-    int x_;
-    int y_;
-    int width_;
-    int height_;
-    int size_;
+		int x_;
+		int y_;
 
 	ofImage chickenUp_;
 	ofImage chickenLeft_;

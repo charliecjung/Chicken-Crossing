@@ -38,7 +38,7 @@ class Coordinator : public ofBaseApp {
 	ofImage backgroundImage_;
 	PickupManager pManager;
 	EnemyManager eManager;
-
+	const int kGameFontSize = 100;
 	//Using ofTruetypeFont
 
 	ofxCenteredTrueTypeFont gameFont;

@@ -13,7 +13,7 @@ bool Coordinator::kResetGame = false;
 void Coordinator::setup() {
 	ofSoundStopAll();
 	ofSoundStreamClose();
-	gameFont.load("Roboto-Black.ttf", 100);
+	gameFont.load("Roboto-Black.ttf", kGameFontSize);
 
 	backgroundImage_.load("images/images/backgroundImage.png");
 	if (SoundPlayer_.isLoaded() == false) {
@@ -68,10 +68,14 @@ void Coordinator::draw() {
 	*/
 	eManager.draw();
 
-	if (kIsGameOver) {
+	if (kIsGameOver && player_.getY() > 0 ){
 
 		//gameFont.drawStringCentered("Game Over \n Press the SPACEBAR to start a new game.", (ofGetWindowWidth() / 2) - (gameFont.stringWidth("				Game Over \n Press the SPACEBAR to start a new game.") / 2), (ofGetWindowHeight() / 2) - (gameFont.stringHeight("Game Over \n Press the SPACEBAR to start a new game.") / 2));
+		
 		gameFont.drawStringCentered("Game Over \n Press the SPACEBAR to start a new game.", ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
+	}
+	else if (kIsGameOver && player_.getY() <= 0) {
+		gameFont.drawStringCentered("You Won!!! :D \n Press the SPACEBAR to start a new game.", ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
 	}
 
 }
@@ -103,23 +107,12 @@ void Coordinator::keyPressed(int key) {
 		}
 
 	}
-	else if (key == 'p') {
-		ofToggleFullscreen();
-
-	}
-
 	else if (key == OF_KEY_ESC) {
-		/*
-		delete powerup1;
-		powerup1 = NULL;
-		delete currentEnemy;
-		currentEnemy = NULL;
-		delete enemyList_;
-		enemyList_ = NULL;
-		*/
-		//kIsGameOver = true;
+		ofToggleFullscreen();
 	}
-
+	else if (key == OF_KEY_RETURN) {
+		std::exit(0);
+	}
 	else {
 		std::cout << "Cannot understand your next movement. Please try again." << std::endl;
 	}
@@ -130,9 +123,9 @@ void Coordinator::KillPlayer() {
 	kIsGameOver = eManager.checkCollision(player_);
 
 	if (player_.getY() <= 0) {
-		ofSetColor(255, 255, 0);
 		glPolygonMode(GL_FRONT, GL_FILL);
 		kIsGameOver = true;
+		
 	}
 	if (kIsGameOver) {
 		GameOver();

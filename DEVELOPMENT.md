@@ -70,8 +70,6 @@ Starting the beginning of the end.
 <h1> Final Tasks </h1>
 
 
-:heavy_exclamation_mark: Add win message.
-
 :heavy_exclamation_mark: Get rid of hardcoded constants
 
 :heavy_exclamation_mark: Make Test cases

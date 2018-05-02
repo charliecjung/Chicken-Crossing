@@ -6,25 +6,25 @@
 
 
 // Player's setup method where I fill in the variables for a Player object (on the stack).
-
 void Player::setup() {
 
-	// Acts as a @Before (In Catch cases).
+	// Hardcoded Constants for bottom middle of screen. Used to place the chicken in the beginning position of the game
+	// Starts the chicken off on the other side of the road (bottom side).
+	fixedWindowWidth_ = 1820;
+	fixedWindowHeight_ = 2060;
 
 	width_ = 100;
 	height_ = 100;
 	isAlive_ = true;
 	size_ = 50;
 
-	// Hardcoded Constants for bottom middle of screen. Used to place the frog in the beginning position of the game
-	// Starts the frog off on the other side of the road (bottom side).
+	x_ = fixedWindowWidth_;
+	y_ = fixedWindowHeight_;
+	
 
-	x_ = 1820;
-	y_ = 2060;
-
-	// x = (ofGetWindowWidth() / 2) - (size * 2);
-	// y = (ofGetWindowHeight() - (size * 2));
 }
+
+
 ofImage Player::getCurrentImage() {
 	return currentImage_;
 }
@@ -150,6 +150,10 @@ ofImage Player::getChickenRight() {
 
 void Player::setAlive(bool lifeState) {
 	isAlive_ = lifeState;
+}
+
+bool Player::getAliveStatus() {
+	return isAlive_;
 }
 
 

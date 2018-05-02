@@ -5,6 +5,7 @@
 //========================================================================
 int main() {
 	ofSetupOpenGL(20, 20, OF_FULLSCREEN);
+	ofSetEscapeQuitsApp(false);
 	ofSetWindowTitle("Chicken Crossing");
 
 	// this kicks off the running of my app

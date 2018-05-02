@@ -4,6 +4,9 @@
 #include "Pickup.h"
 
 class PickupManager {
+public:
+	PickupManager();
+private:
 	Pickup* powerup1;
 
 };
