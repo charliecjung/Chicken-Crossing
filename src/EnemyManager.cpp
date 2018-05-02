@@ -45,15 +45,21 @@ void EnemyManager::SetUp() {
 // Cited from:
 // https://stackoverflow.com/questions/12702561/iterate-through-a-c-vector-using-a-for-loop
 void EnemyManager::draw() {
-	for (std::vector<Enemy*>::iterator it = enemyList_.begin(); it != enemyList_.end(); ++it)
-{
-		*it->draw();
+	for (std::vector<Enemy*> ::iterator it = enemyList_.begin(); it != enemyList_.end(); ++it)
+	{
+		auto temp = *it;
+
+		(*it)->draw();
 }	
 }
 
-void EnemyManager::checkCollision(Player nextPlayer) {
+bool EnemyManager::checkCollision(Player nextPlayer) {
 	for (std::vector<Enemy*>::iterator it = enemyList_.begin(); it != enemyList_.end(); ++it)
 	{
-		(*it)->doOverlap(nextPlayer.getX(), nextPlayer.getY(), (nextPlayer.getX() + nextPlayer.getWidth()), (nextPlayer.getY() + nextPlayer.getHeight()), (*it)->getX(), (*it)->getY(), (*it)->getX() + (*it)->getWidth(), (*it)->getY() + (*it)->getHeight());
+		bool isHit = (*it)->doOverlap(nextPlayer.getX(), nextPlayer.getY(), (nextPlayer.getX() + nextPlayer.getWidth()), (nextPlayer.getY() + nextPlayer.getHeight()), (*it)->getX(), (*it)->getY(), (*it)->getX() + (*it)->getWidth(), (*it)->getY() + (*it)->getHeight());
+		if (isHit) {
+			return true;
+		}
 	}
+	return false;
 }

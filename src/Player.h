@@ -17,7 +17,6 @@ class Player {
     void setX(int newX);
     void setY(int newY);
     void setup();
-    bool isFrogStillAlive();
 	void draw();
 
 	void MoveLeft();
@@ -28,7 +27,8 @@ class Player {
 	ofImage getChickenLeft();
 	ofImage getChickenDown();
 	ofImage getChickenRight();
-
+	void setAlive(bool lifeState);
+	void loadBaseImages();
 
     private:
 

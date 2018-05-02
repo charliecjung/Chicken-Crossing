@@ -13,7 +13,7 @@
 		y_ = newY;
 		width_ = newWidth;
 		height_ = newHeight;
-		ifCollided_ = false;
+		isCollided_ = false;
 		speed_ = newSpeed;
 		speedMultiplier_ = newSpeedMultiplier;
 	}
@@ -35,7 +35,7 @@
 	}
 	
 	bool Enemy::didCollide() {
-		return ifCollided_;
+		return isCollided_;
 	}
 
 	int Enemy::getSpeed() {
@@ -64,6 +64,7 @@
 	}
 	
 	void Enemy::updatePosition(int speedCounter) {
+		
 		speed_ += speedCounter;
 		if (x_ >= ofGetWindowWidth()) {
 			// then the car is out of the screen
@@ -73,7 +74,11 @@
 			x_ = ofGetWindowWidth();
 		}
 			x_ = x_ + speed_;
+			if (isCollided_) {
+				speed_ = 0;
+			}
 	}
+
 
 	//
 	// Referenced from:
@@ -113,11 +118,7 @@
 
 			return false;
 		}
-		/*
-		delete enemyList_;
-		enemyList_ = NULL;
-		*/
-		return true;
+		
 		glPolygonMode(GL_FRONT, GL_FILL);
 		ofDrawBitmapString("Intersecting!", 300, 300);
 		return true;

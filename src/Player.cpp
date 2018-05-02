@@ -17,22 +17,24 @@ void Player::setup() {
 	size_ = 50;
 
 	// Hardcoded Constants for bottom middle of screen. Used to place the frog in the beginning position of the game
-    // Starts the frog off on the other side of the road (bottom side).
+	// Starts the frog off on the other side of the road (bottom side).
 
 	x_ = 1820;
 	y_ = 2060;
 
 	// x = (ofGetWindowWidth() / 2) - (size * 2);
 	// y = (ofGetWindowHeight() - (size * 2));
+}
+ofImage Player::getCurrentImage() {
+	return currentImage_;
+}
 
+void Player::loadBaseImages() {
 	chickenUp_.load("images/chicken/chicken_up.png");
 	chickenLeft_.load("images/chicken/chicken_left.png");
 	chickenRight_.load("images/chicken/chicken_right.png");
 	chickenDown_.load("images/chicken/chicken_down.png");
 	currentImage_.load("images/chicken/chicken_up.png");
-}
-ofImage Player::getCurrentImage() {
-	return currentImage_;
 }
 
 int Player::getX() {
@@ -51,15 +53,15 @@ int Player::getHeight() {
 	return height_;
 }
 void Player::setX(int newX) {
-	x_ = newX;
+	if (isAlive_) {
+		x_ = newX;
+	}
 }
 void Player::setY(int newY) {
-	y_ = newY;
+	if (isAlive_) {
+		y_ = newY;
+	}
 }
-bool Player::isFrogStillAlive() {
-	return isAlive_;
-}
-
 void Player::draw() {
 	glPolygonMode(GL_FRONT, GL_FILL);
 	currentImage_.draw(x_, y_, width_, height_);
@@ -82,50 +84,55 @@ void Player::draw() {
 //This way player movement is consistent through all the Player objects
 
 void Player::MoveLeft() {
+	if (isAlive_) {
+		currentImage_ = chickenLeft_;
 
-	currentImage_ = chickenLeft_;
+		// futureXPos is x coord + body of sprite.
 
-	// futureXPos is x coord + body of sprite.
-	
-	int futureXPos = x_ - size_;
+		int futureXPos = x_ - size_;
 
-	x_ = std::max(0, futureXPos);
+		x_ = std::max(0, futureXPos);
 
-	if (x_ == 0) {
-		x_ = ofGetWindowWidth() - (size_ * 2);
+		if (x_ == 0) {
+			x_ = ofGetWindowWidth() - (size_ * 2);
+		}
 	}
 }
+
 void Player::MoveRight() {
+	if (isAlive_) {
+		currentImage_ = chickenRight_;
 
-	currentImage_ = chickenRight_;
+		//updated futureXPos
 
-	//updated futureXPos
+		int futureXPos = x_ + size_;
 
-	int futureXPos = x_ + size_;
+		x_ = std::min(futureXPos, (ofGetWindowWidth() - (size_ * 2)));
 
-	x_ = std::min(futureXPos, (ofGetWindowWidth() - (size_ * 2)));
-
-	if (x_ == (ofGetWindowWidth() - (size_ * 2))) {
-		x_ = 0 - (size_ * 2);
+		if (x_ == (ofGetWindowWidth() - (size_ * 2))) {
+			x_ = 0 - (size_ * 2);
+		}
 	}
 }
 void Player::MoveUp() {
+	if (isAlive_) {
+		currentImage_ = chickenUp_;
 
-	currentImage_ = chickenUp_;
-
-	int futureYPos = y_ - size_;
-	y_ = std::max(futureYPos, 0);
+		int futureYPos = y_ - size_;
+		y_ = std::max(futureYPos, 0);
+	}
 }
 void Player::MoveDown() {
-	currentImage_ = chickenDown_;
+	if (isAlive_) {
+		currentImage_ = chickenDown_;
 
-	int futureYPos = y_ + size_;
+		int futureYPos = y_ + size_;
 
-	// This was a tricky edge case where I realized that for the player + body of sprite to touch the boundary of the 
-	// visible screen was actually screenWidth - 100. Therefore, I got the screenWidth - (2*sizeofSprite): sizeOfSprite = 50;
-	
-	y_ = std::min(futureYPos, (ofGetWindowHeight() - (size_ * 2)));
+		// This was a tricky edge case where I realized that for the player + body of sprite to touch the boundary of the 
+		// visible screen was actually screenWidth - 100. Therefore, I got the screenWidth - (2*sizeofSprite): sizeOfSprite = 50;
 
+		y_ = std::min(futureYPos, (ofGetWindowHeight() - (size_ * 2)));
+	}
 }
 
 ofImage Player::getChickenUp() {
@@ -140,5 +147,10 @@ ofImage Player::getChickenDown() {
 ofImage Player::getChickenRight() {
 	return chickenRight_;
 }
+
+void Player::setAlive(bool lifeState) {
+	isAlive_ = lifeState;
+}
+
 
 

@@ -10,7 +10,6 @@
 // This is Coordinator loading all of the game sprites and sound files.
 
 void Coordinator::setup() {
-	player_.setup();
 	
 	backgroundImage_.load("images/images/backgroundImage.png");
 
@@ -22,6 +21,8 @@ void Coordinator::setup() {
 	powerup1 = new Pickup(200, 200, 200, 200);
 	powerup1->setCurrentImage("images/powerups/potionBlue.png");
 	*/
+	player_.loadBaseImages();
+	player_.setup();
 
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
@@ -45,8 +46,8 @@ void Coordinator::update() {
 
 //--------------------------------------------------------------
 void Coordinator::draw() {
-	std::cout << "FPS: " + ofToString(ofGetFrameRate()) << std::endl;
-	//doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
+	// std::cout << "FPS: " + ofToString(ofGetFrameRate()) << std::endl;
+	// doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
 
 	glPolygonMode(GL_BACK, GL_FILL);
 	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
@@ -105,19 +106,25 @@ void Coordinator::keyPressed(int key) {
 
 
 	void Coordinator::KillPlayer() {
-		eManager.checkCollision(player_);
+		isGameOver = eManager.checkCollision(player_);
 
 		if (player_.getY() <= 0) {
 			ofSetColor(255, 255, 0);
 			glPolygonMode(GL_FRONT, GL_FILL);
 			isGameOver = true;
 		}
+		if (isGameOver) {
+			GameOver();
+		}
 	}
 	void Coordinator::GameOver() {
-		if (isGameOver) {
-			std::cout << "Game Over" << std::endl;
-			//Just freeze everything; don't std::exit();
-		}
+		// std::cout << "Game Over" << std::endl;
+		//Just freeze everything; don't std::exit();
+		SoundPlayer_.stop();
+		player_.setAlive(false);
+
+		
+		
 
 	}
 	void Coordinator::ResetGame() {

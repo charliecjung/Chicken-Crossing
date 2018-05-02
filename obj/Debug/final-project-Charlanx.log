@@ -1,13 +1,11 @@
-﻿  EnemyManager.cpp
+﻿  Coordinator.cpp
+  Enemy.cpp
+  EnemyManager.cpp
+  main.cpp
   Unknown compiler version - please run the configure tests and report the results
-c:\users\charlie jung\github\final-project-charlanx\src\enemymanager.cpp(48): error C2839: invalid return type 'Enemy **' for overloaded 'operator ->'
-c:\users\charlie jung\github\final-project-charlanx\src\enemymanager.cpp(48): error C2039: 'draw': is not a member of 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
-          with
-          [
-              _Ty=Enemy *
-          ]
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\vector(464): note: see declaration of 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
-          with
-          [
-              _Ty=Enemy *
-          ]
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  Unknown compiler version - please run the configure tests and report the results
+  final-project-Charlanx.vcxproj -> C:\Users\Charlie Jung\Github\final-project-Charlanx\bin\final-project-Charlanx_debug.exe
+  
+  	                   9	C:\of_v0.9.8_vs_release\of_v0.9.8_vs_release\export\vs\Win32\

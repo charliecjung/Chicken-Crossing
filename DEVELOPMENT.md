@@ -67,12 +67,6 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 <h1> Final Tasks </h1>
 
 
-:heavy_exclamation_mark: Change <Enemy> to <Enemy*>
-
-:heavy_exclamation_mark: check getter and setter whether they should be public or private
-
-:heavy_exclamation_mark: Implement EnemyManager to create Enemy objects (Wrapper).
-
 :heavy_exclamation_mark: Create powerups
 
 :heavy_exclamation_mark: Implement Gameover() ResetGame(), KillPlayer()
@@ -83,6 +77,10 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_exclamation_mark: enemyList, powerup1, currentEnemy, enemyList_
 
+:heavy_exclamation_mark: Add an end method for the car's to have a boolean flag and to check flag in move methods and set speed to 0.
+
+:heavy_exclamation_mark: Change your github pass, school pass.
+
 :heavy_check_mark: Find pickup images from opengameart.org
 
 :heavy_check_mark: std::max and min for Move() logic.
@@ -92,6 +90,12 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 :heavy_check_mark: Random() generator for speed
 
 :heavy_check_mark: Ensure that enemySpeed != 0
+
+:heavy_check_mark: Change <Enemy> to <Enemy*>
+
+:heavy_check_mark: check getter and setter whether they should be public or private
+
+:heavy_check_mark: Implement EnemyManager to create Enemy objects (Wrapper).
 
 
 

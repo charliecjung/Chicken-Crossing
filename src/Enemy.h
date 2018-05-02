@@ -32,7 +32,7 @@ class Enemy: public ofBaseApp {
 		int y_;
 		int width_;
 		int height_;
-		bool ifCollided_;
+		bool isCollided_;
 		int speed_;
 		ofImage currentImage_;
 		int speedMultiplier_;

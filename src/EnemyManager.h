@@ -9,7 +9,8 @@ class EnemyManager {
 public:
 	void SetUp();
 	void draw();
-	void checkCollision(Player nextPlayer);
+	bool checkCollision(Player nextPlayer);
+
 
 private:
 	std::vector <Enemy*> createRandomEnemies(int numOfEnemies);
