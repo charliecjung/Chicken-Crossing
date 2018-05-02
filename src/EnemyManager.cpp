@@ -58,8 +58,13 @@ bool EnemyManager::checkCollision(Player nextPlayer) {
 	{
 		bool isHit = (*it)->doOverlap(nextPlayer.getX(), nextPlayer.getY(), (nextPlayer.getX() + nextPlayer.getWidth()), (nextPlayer.getY() + nextPlayer.getHeight()), (*it)->getX(), (*it)->getY(), (*it)->getX() + (*it)->getWidth(), (*it)->getY() + (*it)->getHeight());
 		if (isHit) {
+
 			return true;
 		}
 	}
 	return false;
+}
+
+std::vector <Enemy*> EnemyManager::getEnemyList() {
+	return enemyList_;
 }

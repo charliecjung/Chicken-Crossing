@@ -9,6 +9,7 @@
 
 class Coordinator : public ofBaseApp {
 	public:
+	bool static isGameOver;
 	void setup();
 	void update();
 	void draw();
@@ -16,6 +17,7 @@ class Coordinator : public ofBaseApp {
 	void KillPlayer();
 	void GameOver();
 	void ResetGame();
+	void exit();
 
 
 	//
@@ -28,7 +30,6 @@ class Coordinator : public ofBaseApp {
 	// r2 : Bottom Right coordinate of second rectangle.
 	
 	private:
-	bool isGameOver;
 	Player player_;
 	ofSoundPlayer SoundPlayer_;
 	ofImage backgroundImage_;

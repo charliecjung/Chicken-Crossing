@@ -10,6 +10,7 @@ public:
 	void SetUp();
 	void draw();
 	bool checkCollision(Player nextPlayer);
+	std::vector <Enemy*> getEnemyList();
 
 
 private:

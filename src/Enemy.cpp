@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <vector>
 #include <string>
+#include "Coordinator.h"
 
 	Enemy::Enemy() {
 
@@ -58,26 +59,33 @@
 		speed_ = newSpeed;
 	}
 	void Enemy::draw() {
-		updatePosition(speedMultiplier_);
-		currentImage_.draw(x_, y_, width_, height_);
 		
+		if (Coordinator::isGameOver == false) {
+
+
+			//updatePosition(speedMultiplier_);
+			updatePosition(0);
+		} 
+			currentImage_.draw(x_, y_, width_, height_);
 	}
 	
 	void Enemy::updatePosition(int speedCounter) {
-		
-		speed_ += speedCounter;
-		if (x_ >= ofGetWindowWidth()) {
-			// then the car is out of the screen
-			x_ = 0;
+		if (isCollided_) {
+			speed_ = 0;
 		}
-		else if (x_ <= (0 - (width_ * 2))) {
-			x_ = ofGetWindowWidth();
-		}
-			x_ = x_ + speed_;
-			if (isCollided_) {
-				speed_ = 0;
+		else {
+			speed_ += speedCounter;
+			if (x_ >= ofGetWindowWidth()) {
+				// then the car is out of the screen
+				x_ = 0;
 			}
+			else if (x_ <= (0 - (width_ * 2))) {
+				x_ = ofGetWindowWidth();
+			}
+			x_ = x_ + speed_;
+		}
 	}
+	
 
 
 	//
@@ -121,6 +129,7 @@
 		
 		glPolygonMode(GL_FRONT, GL_FILL);
 		ofDrawBitmapString("Intersecting!", 300, 300);
+		isCollided_ = true;
 		return true;
 	}
 	

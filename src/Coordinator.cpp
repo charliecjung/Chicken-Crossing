@@ -8,7 +8,7 @@
 
 
 // This is Coordinator loading all of the game sprites and sound files.
-
+bool Coordinator::isGameOver = false;
 void Coordinator::setup() {
 	
 	backgroundImage_.load("images/images/backgroundImage.png");
@@ -26,6 +26,10 @@ void Coordinator::setup() {
 
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
+
+}
+
+void Coordinator::exit() {
 
 }
 
@@ -49,15 +53,17 @@ void Coordinator::draw() {
 	// std::cout << "FPS: " + ofToString(ofGetFrameRate()) << std::endl;
 	// doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
 
-	glPolygonMode(GL_BACK, GL_FILL);
-	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
-	glPolygonMode(GL_FRONT, GL_FILL);
 
-	player_.draw();
-	/*
-	powerup1->draw();
-	*/
-	eManager.draw();
+		glPolygonMode(GL_BACK, GL_FILL);
+		backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+		glPolygonMode(GL_FRONT, GL_FILL);
+
+		player_.draw();
+		/*
+		powerup1->draw();
+		*/
+		eManager.draw();
+	
 		
 }
 
@@ -120,13 +126,23 @@ void Coordinator::keyPressed(int key) {
 	void Coordinator::GameOver() {
 		// std::cout << "Game Over" << std::endl;
 		//Just freeze everything; don't std::exit();
+		exit();
 		SoundPlayer_.stop();
 		player_.setAlive(false);
+		for (int i = 0; i < eManager.getEnemyList().size(); i++) {
+			
+			// eManager.getEnemyList()[i]->updatePosition(0);
+			std::cout << eManager.getEnemyList().size() << std::endl;
+			//eManager.getEnemyList()[i]->updatePosition(0);
+
+			
+		}
 
 		
 		
 
 	}
+	
 	void Coordinator::ResetGame() {
 		isGameOver = false;
 

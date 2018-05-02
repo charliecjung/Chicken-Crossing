@@ -79,8 +79,6 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_exclamation_mark: Add an end method for the car's to have a boolean flag and to check flag in move methods and set speed to 0.
 
-:heavy_exclamation_mark: Change your github pass, school pass.
-
 :heavy_check_mark: Find pickup images from opengameart.org
 
 :heavy_check_mark: std::max and min for Move() logic.
