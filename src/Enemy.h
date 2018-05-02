@@ -5,7 +5,6 @@
 
 #include <string>
 #include <vector>
-#include <string>
 
 class Enemy: public ofBaseApp {
 	public:

@@ -21,8 +21,6 @@ class Coordinator : public ofBaseApp {
 	void GameOver();
 	void ResetGame();
 	
-
-
 	//
 	// Referenced from:
 	// https://www.geeksforgeeks.org/find-two-rectangles-overlap/

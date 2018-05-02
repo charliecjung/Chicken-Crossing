@@ -6,7 +6,6 @@
 #include <vector>
 //--------------------------------------------------------------
 
-
 // This is Coordinator loading all of the game sprites and sound files.
 bool Coordinator::kIsGameOver = false;
 bool Coordinator::kResetGame = false;
@@ -29,16 +28,10 @@ void Coordinator::setup() {
 
 }
 
-
 // RM's update() method. Obsolete as draw() seems to be superior at this point.
-
 //--------------------------------------------------------------
 void Coordinator::update() {
 	KillPlayer();
-	if (kIsGameOver) {
-
-	}
-
 }
 // Cited from:
 // https://forum.openframeworks.cc/t/background-image-in-openframeworks-app/11731
@@ -49,24 +42,14 @@ void Coordinator::update() {
 
 //--------------------------------------------------------------
 void Coordinator::draw() {
-	// std::cout << "FPS: " + ofToString(ofGetFrameRate()) << std::endl;
-	// doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
-
-
 	glPolygonMode(GL_BACK, GL_FILL);
 	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	glPolygonMode(GL_FRONT, GL_FILL);
 
 	player_.draw();
-	/*
-	powerup1->draw();
-	*/
 	eManager.draw();
 
-	if (kIsGameOver && player_.getY() > 0 ){
-
-		//gameFont.drawStringCentered("Game Over \n Press the SPACEBAR to start a new game.", (ofGetWindowWidth() / 2) - (gameFont.stringWidth("				Game Over \n Press the SPACEBAR to start a new game.") / 2), (ofGetWindowHeight() / 2) - (gameFont.stringHeight("Game Over \n Press the SPACEBAR to start a new game.") / 2));
-		
+	if (kIsGameOver && player_.getY() > 0 ){	
 		gameFont.drawStringCentered(gameOverText_, ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
 	}
 	else if (kIsGameOver && player_.getY() <= 0) {
@@ -74,7 +57,6 @@ void Coordinator::draw() {
 	}
 
 }
-
 
 //--------------------------------------------------------------
 
@@ -100,7 +82,6 @@ void Coordinator::keyPressed(int key) {
 		if (Coordinator::kIsGameOver == true && Coordinator::kResetGame == false) {
 			ResetGame();
 		}
-
 	}
 	else if (key == OF_KEY_ESC) {
 		ofToggleFullscreen();
@@ -128,25 +109,21 @@ void Coordinator::KillPlayer() {
 	if (player_.getY() <= 0) {
 		glPolygonMode(GL_FRONT, GL_FILL);
 		kIsGameOver = true;
-		
 	}
 	if (kIsGameOver) {
-		
 		GameOver();
-
 	}
 }
+
 void Coordinator::GameOver() {
 	// std::cout << "Game Over" << std::endl;
 	//Just freeze everything; don't std::exit();
 	SoundPlayer_.setLoop(false);
 	SoundPlayer_.stop();
 	player_.setAlive(false);
-	
 }
 
 void Coordinator::ResetGame() {
-
 	kResetGame = false;
 	kIsGameOver = false;
 	ofRunApp(new Coordinator());

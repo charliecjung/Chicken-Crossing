@@ -67,6 +67,10 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 Starting the beginning of the end.
 
+I finished a lot of things. such as cleaning up pointers (delete): organizing
+hard code constants, etc... I might tidy up the code later but I need to make
+a makefile and make some test cases.
+
 <h1> Final Tasks </h1>
 
 :heavy_exclamation_mark: Make Test cases

@@ -18,10 +18,10 @@ private:
 	std::vector <Enemy*> createRandomEnemies(int numOfEnemies);
 	std::vector <Enemy*> enemyList_;
 	Enemy* currentEnemy;
-	const int kRandMinMarker = -20;
-	const int kRandMaxMarker = 20;
-	const int kRandGenStartMarker = -30;
-	const int kRandGenEndMarker = 30;
+	const int kRandMinMarker = -10;
+	const int kRandMaxMarker = 10;
+	const int kRandGenStartMarker = -15;
+	const int kRandGenEndMarker = 31;
 	const int kRangeOfXSpawnLoc = 1000;
 	const int kRangeOfYSpawnLoc = 350;
 	const int kEnemyWidth = 200;

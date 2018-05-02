@@ -18,3 +18,14 @@ ESCAPE - Toggle FullScreen
 SPACEBAR = Used to start a new game when game is over
 
 RETURN/ENTER = Used to exit the game while playing it.
+
+
+To build this file for now.
+
+<h1> Visual Studio 2017 </h1>
+
+Open a new Visual Studio project and open the solution called "final-project-XXXX.sln"
+
+Then you can click "Local Windows Debugger" to play my game!
+
+Enjoy!
