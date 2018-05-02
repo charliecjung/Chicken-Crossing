@@ -67,9 +67,15 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 <h1> Final Tasks </h1>
 
 
-:heavy_exclamation_mark: Create powerups
 
-:heavy_exclamation_mark: Implement Gameover() ResetGame(), KillPlayer()
+
+:heavy_exclamation_mark: Make Test cases
+
+:heavy_exclamation_mark: Make makefile and create README.md
+
+:heavy_exclamation_mark: Implement ResetGame()
+
+:heavy_exclamation_mark: Create powerups
 
 :heavy_exclamation_mark: Make several levels. (Need to find more background images).
 
@@ -77,7 +83,7 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 
 :heavy_exclamation_mark: enemyList, powerup1, currentEnemy, enemyList_
 
-:heavy_exclamation_mark: Add an end method for the car's to have a boolean flag and to check flag in move methods and set speed to 0.
+:heavy_check_mark: Add an end method for the car's to have a boolean flag and to check flag in move methods and set speed to 0.
 
 :heavy_check_mark: Find pickup images from opengameart.org
 
@@ -94,6 +100,8 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 :heavy_check_mark: check getter and setter whether they should be public or private
 
 :heavy_check_mark: Implement EnemyManager to create Enemy objects (Wrapper).
+
+:heavy_check_mark: Implement Gameover() ResetGame(), KillPlayer()
 
 
 
