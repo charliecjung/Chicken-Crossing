@@ -67,17 +67,11 @@ we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All 
 <h1> Final Tasks </h1>
 
 
-
+:heavy_exclamation_mark: Add win message.
 
 :heavy_exclamation_mark: Make Test cases
 
 :heavy_exclamation_mark: Make makefile and create README.md
-
-:heavy_exclamation_mark: Implement ResetGame()
-
-:heavy_exclamation_mark: Create powerups
-
-:heavy_exclamation_mark: Make several levels. (Need to find more background images).
 
 :heavy_exclamation_mark: Add methods to delete pointers.
 
@@ -127,6 +121,14 @@ Cars Attribution: https://opengameart.org/content/2d-cars-pack (Carlos Alface)
 
 Powerup Items supplied by Ravenmore: https://opengameart.org/content/fantasy-icon-pack-by-ravenmore-0
 (His portfolio site: http://dycha.net)
+
+Death Message Font provided at: 
+https://fonts.google.com/specimen/Roboto?selection.family=Roboto
+by Christian Robertson
+(Roboto).
+
+Thanks to armadillu for a ofxCenteredTrueTypeFont
+https://github.com/armadillu/ofxCenteredTrueTypeFont/tree/master/example
 
 
 

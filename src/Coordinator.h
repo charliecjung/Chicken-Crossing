@@ -6,10 +6,12 @@
 #include "Player.h"
 #include "ofMain.h"
 #include <vector>
+#include "ofxCenteredTrueTypeFont.h"
 
 class Coordinator : public ofBaseApp {
 	public:
-	bool static isGameOver;
+	bool static kIsGameOver;
+	bool static kResetGame;
 	void setup();
 	void update();
 	void draw();
@@ -17,7 +19,7 @@ class Coordinator : public ofBaseApp {
 	void KillPlayer();
 	void GameOver();
 	void ResetGame();
-	void exit();
+	
 
 
 	//
@@ -30,11 +32,16 @@ class Coordinator : public ofBaseApp {
 	// r2 : Bottom Right coordinate of second rectangle.
 	
 	private:
+
 	Player player_;
 	ofSoundPlayer SoundPlayer_;
 	ofImage backgroundImage_;
 	PickupManager pManager;
 	EnemyManager eManager;
+
+	//Using ofTruetypeFont
+
+	ofxCenteredTrueTypeFont gameFont;
 
 	
 };

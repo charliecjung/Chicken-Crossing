@@ -96,7 +96,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxCenteredTrueTypeFont\src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -115,7 +115,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxCenteredTrueTypeFont\src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -134,7 +134,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxCenteredTrueTypeFont\src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -156,7 +156,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxCenteredTrueTypeFont\src;..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -172,12 +172,12 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Pickup.cpp" />
-    <ClCompile Include="src\PickupManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Coordinator.cpp" />
     <ClCompile Include="src\Enemy.cpp" />
     <ClCompile Include="src\EnemyManager.cpp" />
+    <ClCompile Include="src\Pickup.cpp" />
+    <ClCompile Include="src\PickupManager.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.cpp" />
     <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxButton.cpp" />
@@ -189,12 +189,13 @@
     <ClCompile Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxToggle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Pickup.h" />
-    <ClInclude Include="src\PickupManager.h" />
     <ClInclude Include="src\Coordinator.h" />
     <ClInclude Include="src\Enemy.h" />
     <ClInclude Include="src\EnemyManager.h" />
+    <ClInclude Include="src\Pickup.h" />
+    <ClInclude Include="src\PickupManager.h" />
     <ClInclude Include="src\Player.h" />
+    <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxCenteredTrueTypeFont\src\ofxCenteredTrueTypeFont.h" />
     <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.h" />
     <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxButton.h" />
     <ClInclude Include="..\..\..\..\of_v0.9.8_vs_release\of_v0.9.8_vs_release\addons\ofxGui\src\ofxGui.h" />

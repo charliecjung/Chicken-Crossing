@@ -8,14 +8,18 @@
 
 
 // This is Coordinator loading all of the game sprites and sound files.
-bool Coordinator::isGameOver = false;
+bool Coordinator::kIsGameOver = false;
+bool Coordinator::kResetGame = false;
 void Coordinator::setup() {
-	
-	backgroundImage_.load("images/images/backgroundImage.png");
+	ofSoundStopAll();
+	ofSoundStreamClose();
+	gameFont.load("Roboto-Black.ttf", 100);
 
-	SoundPlayer_.load("music/backgroundMusic.flac");
-	
-	
+	backgroundImage_.load("images/images/backgroundImage.png");
+	if (SoundPlayer_.isLoaded() == false) {
+		SoundPlayer_.load("music/backgroundMusic.flac");
+	}
+
 	eManager.SetUp();
 	/*
 	powerup1 = new Pickup(200, 200, 200, 200);
@@ -23,23 +27,23 @@ void Coordinator::setup() {
 	*/
 	player_.loadBaseImages();
 	player_.setup();
-
+	if (SoundPlayer_.isPlaying() == false) {
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
+}
 
 }
 
-void Coordinator::exit() {
-
-}
 
 // RM's update() method. Obsolete as draw() seems to be superior at this point.
 
 //--------------------------------------------------------------
 void Coordinator::update() {
 	KillPlayer();
-	
-	
+	if (kIsGameOver) {
+
+	}
+
 }
 // Cited from:
 // https://forum.openframeworks.cc/t/background-image-in-openframeworks-app/11731
@@ -54,17 +58,22 @@ void Coordinator::draw() {
 	// doOverlap(player_.getX(), player_.getY(), (player_.getX() + player_.getWidth()), (player_.getY() + player_.getHeight()), testEnemy_->getX(), testEnemy_->getY(), (testEnemy_->getX() + testEnemy_->getWidth()), (testEnemy_->getY() + testEnemy_->getHeight()));
 
 
-		glPolygonMode(GL_BACK, GL_FILL);
-		backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
-		glPolygonMode(GL_FRONT, GL_FILL);
+	glPolygonMode(GL_BACK, GL_FILL);
+	backgroundImage_.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+	glPolygonMode(GL_FRONT, GL_FILL);
 
-		player_.draw();
-		/*
-		powerup1->draw();
-		*/
-		eManager.draw();
-	
-		
+	player_.draw();
+	/*
+	powerup1->draw();
+	*/
+	eManager.draw();
+
+	if (kIsGameOver) {
+
+		//gameFont.drawStringCentered("Game Over \n Press the SPACEBAR to start a new game.", (ofGetWindowWidth() / 2) - (gameFont.stringWidth("				Game Over \n Press the SPACEBAR to start a new game.") / 2), (ofGetWindowHeight() / 2) - (gameFont.stringHeight("Game Over \n Press the SPACEBAR to start a new game.") / 2));
+		gameFont.drawStringCentered("Game Over \n Press the SPACEBAR to start a new game.", ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
+	}
+
 }
 
 
@@ -88,11 +97,17 @@ void Coordinator::keyPressed(int key) {
 	else if (key == OF_KEY_DOWN) {
 		player_.MoveDown();
 	}
+	else if (key == ' ') {
+		if (Coordinator::kIsGameOver == true && Coordinator::kResetGame == false) {
+			ResetGame();
+		}
+
+	}
 	else if (key == 'p') {
 		ofToggleFullscreen();
 
 	}
-	
+
 	else if (key == OF_KEY_ESC) {
 		/*
 		delete powerup1;
@@ -102,49 +117,42 @@ void Coordinator::keyPressed(int key) {
 		delete enemyList_;
 		enemyList_ = NULL;
 		*/
-		isGameOver = true;
+		//kIsGameOver = true;
 	}
-	
+
 	else {
 		std::cout << "Cannot understand your next movement. Please try again." << std::endl;
 	}
 }
 
 
-	void Coordinator::KillPlayer() {
-		isGameOver = eManager.checkCollision(player_);
+void Coordinator::KillPlayer() {
+	kIsGameOver = eManager.checkCollision(player_);
 
-		if (player_.getY() <= 0) {
-			ofSetColor(255, 255, 0);
-			glPolygonMode(GL_FRONT, GL_FILL);
-			isGameOver = true;
-		}
-		if (isGameOver) {
-			GameOver();
-		}
+	if (player_.getY() <= 0) {
+		ofSetColor(255, 255, 0);
+		glPolygonMode(GL_FRONT, GL_FILL);
+		kIsGameOver = true;
 	}
-	void Coordinator::GameOver() {
-		// std::cout << "Game Over" << std::endl;
-		//Just freeze everything; don't std::exit();
-		exit();
-		SoundPlayer_.stop();
-		player_.setAlive(false);
-		for (int i = 0; i < eManager.getEnemyList().size(); i++) {
-			
-			// eManager.getEnemyList()[i]->updatePosition(0);
-			std::cout << eManager.getEnemyList().size() << std::endl;
-			//eManager.getEnemyList()[i]->updatePosition(0);
-
-			
-		}
-
-		
-		
+	if (kIsGameOver) {
+		GameOver();
 
 	}
-	
-	void Coordinator::ResetGame() {
-		isGameOver = false;
+}
+void Coordinator::GameOver() {
+	// std::cout << "Game Over" << std::endl;
+	//Just freeze everything; don't std::exit();
+	SoundPlayer_.setLoop(false);
+	SoundPlayer_.stop();
+	player_.setAlive(false);
 
-	}
+}
+
+void Coordinator::ResetGame() {
+
+	kResetGame = false;
+	kIsGameOver = false;
+	ofRunApp(new Coordinator());
+
+}
 

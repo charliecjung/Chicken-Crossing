@@ -26,8 +26,8 @@ std::vector <Enemy*> EnemyManager::createRandomEnemies(int numOfEnemies) {
 			}
 		}
 		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 150, randomNumber, 0);
-		int randomInt = (rand() % 4);
-		int randomSecondInt = (rand() % 8);
+		int randomInt = ((rand() % 4) + 1);
+		int randomSecondInt = ((rand() % 8) + 1);
 		//currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
 		currentEnemy->getCurrentImage().load("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
 		//tempList.push_back(*currentEnemy);

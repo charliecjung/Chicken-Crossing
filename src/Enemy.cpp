@@ -60,12 +60,15 @@
 	}
 	void Enemy::draw() {
 		
-		if (Coordinator::isGameOver == false) {
+		if (Coordinator::kIsGameOver == false) {
 
 
 			//updatePosition(speedMultiplier_);
+			
 			updatePosition(0);
 		} 
+		
+
 			currentImage_.draw(x_, y_, width_, height_);
 	}
 	
