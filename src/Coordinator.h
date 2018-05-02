@@ -7,6 +7,7 @@
 #include "ofMain.h"
 #include <vector>
 #include "ofxCenteredTrueTypeFont.h"
+#include <string>
 
 class Coordinator : public ofBaseApp {
 	public:
@@ -39,6 +40,12 @@ class Coordinator : public ofBaseApp {
 	PickupManager pManager;
 	EnemyManager eManager;
 	const int kGameFontSize = 100;
+	std::string robotoFont_ = "Roboto-Black.ttf";
+	std::string backgroundImagePath_ = "images/images/backgroundImage.png";
+	std::string soundPath_ = "music/backgroundMusic.flac";
+	std::string gameOverText_ = "Game Over \n Press the SPACEBAR to start a new game.";
+	std::string youWonText_ = "You Won!!! :D \n Press the SPACEBAR to start a new game.";
+	std::string confusedInputText_ = "Cannot understand your next movement. Please try again.";
 	//Using ofTruetypeFont
 
 	ofxCenteredTrueTypeFont gameFont;

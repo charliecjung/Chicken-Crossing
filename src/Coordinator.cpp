@@ -13,11 +13,11 @@ bool Coordinator::kResetGame = false;
 void Coordinator::setup() {
 	ofSoundStopAll();
 	ofSoundStreamClose();
-	gameFont.load("Roboto-Black.ttf", kGameFontSize);
+	gameFont.load(robotoFont_, kGameFontSize);
 
-	backgroundImage_.load("images/images/backgroundImage.png");
+	backgroundImage_.load(backgroundImagePath_);
 	if (SoundPlayer_.isLoaded() == false) {
-		SoundPlayer_.load("music/backgroundMusic.flac");
+		SoundPlayer_.load(soundPath_);
 	}
 
 	eManager.SetUp();
@@ -72,10 +72,10 @@ void Coordinator::draw() {
 
 		//gameFont.drawStringCentered("Game Over \n Press the SPACEBAR to start a new game.", (ofGetWindowWidth() / 2) - (gameFont.stringWidth("				Game Over \n Press the SPACEBAR to start a new game.") / 2), (ofGetWindowHeight() / 2) - (gameFont.stringHeight("Game Over \n Press the SPACEBAR to start a new game.") / 2));
 		
-		gameFont.drawStringCentered("Game Over \n Press the SPACEBAR to start a new game.", ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
+		gameFont.drawStringCentered(gameOverText_, ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
 	}
 	else if (kIsGameOver && player_.getY() <= 0) {
-		gameFont.drawStringCentered("You Won!!! :D \n Press the SPACEBAR to start a new game.", ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
+		gameFont.drawStringCentered(youWonText_, ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
 	}
 
 }
@@ -114,7 +114,7 @@ void Coordinator::keyPressed(int key) {
 		std::exit(0);
 	}
 	else {
-		std::cout << "Cannot understand your next movement. Please try again." << std::endl;
+		std::cout << confusedInputText_ << std::endl;
 	}
 }
 
