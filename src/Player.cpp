@@ -4,37 +4,16 @@
 #include <string>
 
 
-
-// Player's setup method where I fill in the variables for a Player object (on the stack).
-void Player::setup() {
-
-	// Hardcoded Constants for bottom middle of screen. Used to place the chicken in the beginning position of the game
-	// Starts the chicken off on the other side of the road (bottom side).
-	fixedWindowWidth_ = 1820;
-	fixedWindowHeight_ = 2060;
-
-	width_ = 100;
-	height_ = 100;
-	isAlive_ = true;
-	size_ = 50;
-
-	x_ = fixedWindowWidth_;
-	y_ = fixedWindowHeight_;
-	
-
-}
-
-
 ofImage Player::getCurrentImage() {
 	return currentImage_;
 }
 
 void Player::loadBaseImages() {
-	chickenUp_.load("images/chicken/chicken_up.png");
-	chickenLeft_.load("images/chicken/chicken_left.png");
-	chickenRight_.load("images/chicken/chicken_right.png");
-	chickenDown_.load("images/chicken/chicken_down.png");
-	currentImage_.load("images/chicken/chicken_up.png");
+	chickenUp_.load(chickenUpImagePath);
+	chickenLeft_.load(chickenLeftImagePath);
+	chickenRight_.load(chickenRightImagePath);
+	chickenDown_.load(chickenDownImagePath);
+	currentImage_.load(chickenUpImagePath);
 }
 
 int Player::getX() {

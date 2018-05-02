@@ -69,16 +69,13 @@ Starting the beginning of the end.
 
 <h1> Final Tasks </h1>
 
-
-:heavy_exclamation_mark: Get rid of hardcoded constants
-
 :heavy_exclamation_mark: Make Test cases
 
 :heavy_exclamation_mark: Make makefile and create README.md
 
-:heavy_exclamation_mark: Add methods to delete pointers.
+:heavy_check_mark: Add methods to delete pointers.
 
-:heavy_exclamation_mark: enemyList, powerup1, currentEnemy, enemyList_
+:heavy_check_mark: enemyList, powerup1, currentEnemy, enemyList_
 
 :heavy_check_mark: Add an end method for the car's to have a boolean flag and to check flag in move methods and set speed to 0.
 

@@ -13,23 +13,23 @@ std::vector <Enemy*> EnemyManager::createRandomEnemies(int numOfEnemies) {
 		// Cited from:
 		// https://stackoverflow.com/questions/7887941/random-number-from-9-to-9-in-c
 		//rand() negative generation -10 to 10
-
-		int randomNumber = ((rand() % 60) - 30);
+		int randomNumber = ((rand() % kRandGenEndMarker) - kRandGenStartMarker);
+	
 		if (randomNumber == 0) {
 			int anotherRandom = rand() % 1;
-			randomNumber = ((rand() % 60) - 30);
+			randomNumber = ((rand() % kRandGenEndMarker) - kRandGenStartMarker);
 			if (anotherRandom == 1) {
-				randomNumber = std::min(randomNumber, -11);
+				randomNumber = std::min(randomNumber, kRandMinMarker);
 			}
 			else if (anotherRandom == 0) {
-				randomNumber = std::max(11, randomNumber);
+				randomNumber = std::max(kRandMaxMarker, randomNumber);
 			}
 		}
-		currentEnemy = new Enemy(((rand() % 1) + 1000) * i, 350 * i, 200, 150, randomNumber, 0);
-		int randomInt = ((rand() % 4) + 1);
-		int randomSecondInt = ((rand() % 8) + 1);
+		currentEnemy = new Enemy(((rand() % 1) + kRangeOfXSpawnLoc) * i, kRangeOfYSpawnLoc * i, kEnemyWidth, kEnemyHeight, randomNumber, kEnemySpeedMultiplier);
+		int randomInt = ((rand() % kRandIntStart) + 1);
+		int randomSecondInt = ((rand() % kRandIntEnd) + 1);
 		//currentEnemy->setCurrentImage("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
-		currentEnemy->getCurrentImage().load("images/enemies/Cars/Cars-01-" + ofToString(randomInt) + ofToString(randomSecondInt) + ".png");
+		currentEnemy->getCurrentImage().load(carsPath_ + ofToString(randomInt) + ofToString(randomSecondInt) + imageExtension_);
 		//tempList.push_back(*currentEnemy);
 		tempList.push_back(currentEnemy);
 		//delete currentEnemy;
@@ -38,7 +38,7 @@ std::vector <Enemy*> EnemyManager::createRandomEnemies(int numOfEnemies) {
 	return tempList;
 }
 void EnemyManager::SetUp() {
-	enemyList_ = createRandomEnemies(5);
+	enemyList_ = createRandomEnemies(enemyCount_);
 }
 
 // Iterating through a vector using a new iterator

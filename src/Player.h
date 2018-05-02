@@ -16,7 +16,6 @@ class Player {
     int getSize();
     void setX(int newX);
     void setY(int newY);
-    void setup();
 	void draw();
 	bool getAliveStatus();
 
@@ -32,20 +31,28 @@ class Player {
 	void loadBaseImages();
 
     private:
-		int fixedWindowWidth_;
-		int fixedWindowHeight_;
-		int width_;
-		int height_;
-		int size_;
+		int fixedWindowWidth_ = 1820;
+		int fixedWindowHeight_ = 2060;
 
-		int x_;
-		int y_;
+		int width_ = 100;
+		int height_ = 100;
+		int isAlive_ = true;
+		int size_ = 50;
 
+		int x_ = fixedWindowWidth_;
+		int y_ = fixedWindowHeight_;
+
+
+
+		std::string chickenUpImagePath = "images/chicken/chicken_up.png";
+		std::string chickenLeftImagePath = "images/chicken/chicken_left.png";
+		std::string chickenRightImagePath = "images/chicken/chicken_right.png";
+		std::string chickenDownImagePath = "images/chicken/chicken_down.png";
 	ofImage chickenUp_;
 	ofImage chickenLeft_;
 	ofImage chickenRight_;
 	ofImage chickenDown_;
 	ofImage currentImage_;
-    bool isAlive_;
+  
 };
 #endif // PLAYER_H

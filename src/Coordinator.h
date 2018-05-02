@@ -46,6 +46,8 @@ class Coordinator : public ofBaseApp {
 	std::string gameOverText_ = "Game Over \n Press the SPACEBAR to start a new game.";
 	std::string youWonText_ = "You Won!!! :D \n Press the SPACEBAR to start a new game.";
 	std::string confusedInputText_ = "Cannot understand your next movement. Please try again.";
+	const char kSurpriseKey = 'm';
+	const int kSurpriseNumber = 900;
 	//Using ofTruetypeFont
 
 	ofxCenteredTrueTypeFont gameFont;

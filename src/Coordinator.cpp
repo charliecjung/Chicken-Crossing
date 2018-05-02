@@ -21,12 +21,7 @@ void Coordinator::setup() {
 	}
 
 	eManager.SetUp();
-	/*
-	powerup1 = new Pickup(200, 200, 200, 200);
-	powerup1->setCurrentImage("images/powerups/potionBlue.png");
-	*/
 	player_.loadBaseImages();
-	player_.setup();
 	if (SoundPlayer_.isPlaying() == false) {
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
@@ -111,7 +106,15 @@ void Coordinator::keyPressed(int key) {
 		ofToggleFullscreen();
 	}
 	else if (key == OF_KEY_RETURN) {
+		for (int i = 0; i < eManager.getEnemyList().size(); i++) {
+			delete eManager.getEnemyList()[i];
+		}
 		std::exit(0);
+	}
+	else if (key == kSurpriseKey) {
+		for (int i = 0; i < eManager.getEnemyList().size();  i++) {
+			eManager.getEnemyList()[i]->updatePosition(kSurpriseNumber);
+		}
 	}
 	else {
 		std::cout << confusedInputText_ << std::endl;
@@ -128,6 +131,7 @@ void Coordinator::KillPlayer() {
 		
 	}
 	if (kIsGameOver) {
+		
 		GameOver();
 
 	}
@@ -138,7 +142,7 @@ void Coordinator::GameOver() {
 	SoundPlayer_.setLoop(false);
 	SoundPlayer_.stop();
 	player_.setAlive(false);
-
+	
 }
 
 void Coordinator::ResetGame() {
