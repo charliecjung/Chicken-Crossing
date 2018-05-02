@@ -63,6 +63,9 @@ Replaced my Move() functions with std::Max and std::Min's. A whole lot simpler.
 Finished almost the whole game. Should start working on test cases and how to stop the car's speed from becoming 0. Other than that
 we could implement <i> powerups </i> and testcases using <b> Catch.hpp </b> All done for now!
 
+<h1> May 2, 2018 </h1>
+
+Starting the beginning of the end.
 
 <h1> Final Tasks </h1>
 
