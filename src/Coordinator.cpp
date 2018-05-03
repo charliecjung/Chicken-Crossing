@@ -4,12 +4,12 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include <vector>
-//--------------------------------------------------------------
 
-// This is Coordinator loading all of the game sprites and sound files.
 bool Coordinator::kIsGameOver = false;
 bool Coordinator::kResetGame = false;
 void Coordinator::setup() {
+	//stop sounds
+
 	ofSoundStopAll();
 	ofSoundStreamClose();
 	gameFont.load(robotoFont_, kGameFontSize);
@@ -21,6 +21,7 @@ void Coordinator::setup() {
 
 	eManager.SetUp();
 	player_.loadBaseImages();
+
 	if (SoundPlayer_.isPlaying() == false) {
 	SoundPlayer_.setLoop(true);
 	SoundPlayer_.play();
@@ -62,8 +63,6 @@ void Coordinator::draw() {
 
 // Citing from:
 // https://forum.openframeworks.cc/t/call-keypressed-in-draw-function/12880/2
-
-// This handles the key presses of the arrow keys for the movement of the frog.
 
 void Coordinator::keyPressed(int key) {
 	if (key == OF_KEY_UP) {
@@ -116,8 +115,8 @@ void Coordinator::KillPlayer() {
 }
 
 void Coordinator::GameOver() {
-	// std::cout << "Game Over" << std::endl;
 	//Just freeze everything; don't std::exit();
+
 	SoundPlayer_.setLoop(false);
 	SoundPlayer_.stop();
 	player_.setAlive(false);

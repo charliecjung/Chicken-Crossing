@@ -33,7 +33,6 @@ private:
 	const int kRandIntStart = 4;
 	const int kRandIntEnd = 8;
 	
-
 };
 
 

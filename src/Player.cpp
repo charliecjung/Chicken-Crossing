@@ -98,6 +98,7 @@ void Player::MoveUp() {
 		currentImage_ = chickenUp_;
 
 		int futureYPos = y_ - size_;
+
 		y_ = std::max(futureYPos, 0);
 	}
 }

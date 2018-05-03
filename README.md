@@ -28,7 +28,7 @@ To build this file for now.
 
 Clone my project somewhere into your desktop.
 
-Open a new Visual Studio project and open the solution called "final-project-XXXX.sln" inside of my project.
+Open Visual Studio and open the solution called "final-project-XXXX.sln" inside of my project.
 
 Then you can click "Local Windows Debugger" to play my game!
 

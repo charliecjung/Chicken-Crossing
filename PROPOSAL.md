@@ -1,5 +1,5 @@
 #               Frogger 
-## I will be using openFrameworks to create a **Frogger** game.
+## I will be using openFrameworks to create a **Chicken Crossing** Game.
 
 [OpenGameArt](https://opengameart.org) will be where I get a lot of the sprites for 
 the video game. Audio will be provided by [Freesound](https://freesound.org)
@@ -14,6 +14,8 @@ This project will probably have *several* abstract classes such as a dedicated
 Player class, Obstacle class that will be extended to Cars. Other libaries
 will probably be added but I will have to see how they come together throughout
 the course of this project.
+
+I ended up using ofXGui and ofxCenteredTrueTypeFont.
 
 Resources:
 * https://opengameart.org

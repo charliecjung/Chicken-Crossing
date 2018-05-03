@@ -2,7 +2,6 @@
 #define PLAYER_H
 
 #include <string>
-
 #include "ofMain.h"
 
 class Player {

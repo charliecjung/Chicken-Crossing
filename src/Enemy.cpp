@@ -61,15 +61,9 @@
 	void Enemy::draw() {
 		
 		if (Coordinator::kIsGameOver == false) {
-
-
-			//updatePosition(speedMultiplier_);
-			
 			updatePosition(0);
 		} 
-		
-
-			currentImage_.draw(x_, y_, width_, height_);
+		currentImage_.draw(x_, y_, width_, height_);
 	}
 	
 	void Enemy::updatePosition(int speedCounter) {
@@ -77,9 +71,12 @@
 			speed_ = 0;
 		}
 		else {
+
 			speed_ += speedCounter;
+
 			if (x_ >= ofGetWindowWidth()) {
 				// then the car is out of the screen
+
 				x_ = 0;
 			}
 			else if (x_ <= (0 - (width_ * 2))) {
@@ -103,7 +100,6 @@
 	// https://www.geeksforgeeks.org/find-two-rectangles-overlap/
 	bool Enemy::doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2) {
 		if ((leftX1 > rightX2 || leftX2 > rightX1) || (leftY1 > rightY2 || leftY2 > rightY1)) {
-			//isGameOver = true;
 			glPolygonMode(GL_FRONT, GL_FILL);
 			return false;
 		}

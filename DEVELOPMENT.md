@@ -74,6 +74,22 @@ a makefile and make some test cases.
 Done.
 <h1> Final Tasks </h1>
 
+<h1> May 2, 2018 11:38pm... </h1>
+<b> Finished writing the theoretical test cases. </b>
+I think I am done. I have commented out the test cases because I could not get test cases to work but committed what I think I would have tested for my game if I got
+testing to work.
+
+This has been a fun experience and I hope to make this project public as I used non-commercial images and sounds (with appropriate credit to the owners) to create my
+replica of the famous Frogger game.
+
+I enjoyed learning about abstraction into different classes and learning C++ to run programs in a more efficient manner.
+
+Goodbye, CS 126. It has a good one!
+
+<b> Signing out </b>
+
+
+
 
 :heavy_check_mark: Add methods to delete pointers.
 
