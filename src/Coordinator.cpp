@@ -29,8 +29,7 @@ void Coordinator::setup() {
 
 }
 
-// RM's update() method. Obsolete as draw() seems to be superior at this point.
-//--------------------------------------------------------------
+
 void Coordinator::update() {
 	KillPlayer();
 }
