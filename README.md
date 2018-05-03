@@ -5,7 +5,7 @@
 Hello,
 
 
-Here are the instructions to your game:
+Here are the instructions to my game:
 
 Arrow Keys are for movement. 
 Up Arrow - Up
@@ -23,8 +23,12 @@ RETURN/ENTER = Used to exit the game while playing it.
 To build this file for now.
 
 <h1> Visual Studio 2017 </h1>
+<b> Warning: Windows only for now (Stable) </b>
+<b> Mac / Linux / Other users: You could probably recompile the files on your prospective platforms :D </b>
 
-Open a new Visual Studio project and open the solution called "final-project-XXXX.sln"
+Clone my project somewhere into your desktop.
+
+Open a new Visual Studio project and open the solution called "final-project-XXXX.sln" inside of my project.
 
 Then you can click "Local Windows Debugger" to play my game!
 
