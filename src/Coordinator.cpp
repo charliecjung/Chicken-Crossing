@@ -29,7 +29,6 @@ void Coordinator::setup() {
 
 }
 
-
 void Coordinator::update() {
 	KillPlayer();
 }
