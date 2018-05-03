@@ -10,7 +10,7 @@
 #include <string>
 
 class Coordinator : public ofBaseApp {
-	public:
+public:
 	bool static kIsGameOver;
 	bool static kResetGame;
 	void setup();
@@ -30,7 +30,7 @@ class Coordinator : public ofBaseApp {
 	// l2 : Top Left coordinate of second rectangle.
 	// r2 : Bottom Right coordinate of second rectangle.
 	
-	private:
+private:
 
 	Player player_;
 	ofSoundPlayer SoundPlayer_;
@@ -49,6 +49,8 @@ class Coordinator : public ofBaseApp {
 	//Using ofTruetypeFont
 
 	ofxCenteredTrueTypeFont gameFont;
+
+	
 
 	
 };

@@ -6,9 +6,9 @@
 #include "ofMain.h"
 
 class Player {
-    public:
+ public:
 	
-    ofImage getCurrentImage();
+	ofImage getCurrentImage();
     int getX();
     int getY();
     int getWidth();
@@ -18,7 +18,6 @@ class Player {
     void setY(int newY);
 	void draw();
 	bool getAliveStatus();
-
 	void MoveLeft();
 	void MoveRight();
 	void MoveUp();
@@ -30,24 +29,19 @@ class Player {
 	void setAlive(bool lifeState);
 	void loadBaseImages();
 
-    private:
-		int fixedWindowWidth_ = 1820;
-		int fixedWindowHeight_ = 2060;
-
-		int width_ = 100;
-		int height_ = 100;
-		int isAlive_ = true;
-		int size_ = 50;
-
-		int x_ = fixedWindowWidth_;
-		int y_ = fixedWindowHeight_;
-
-
-
-		std::string chickenUpImagePath = "images/chicken/chicken_up.png";
-		std::string chickenLeftImagePath = "images/chicken/chicken_left.png";
-		std::string chickenRightImagePath = "images/chicken/chicken_right.png";
-		std::string chickenDownImagePath = "images/chicken/chicken_down.png";
+private:
+	int fixedWindowWidth_ = 1820;
+	int fixedWindowHeight_ = 2060;
+	int width_ = 100;
+	int height_ = 100;
+	int isAlive_ = true;
+	int size_ = 50;
+	int x_ = fixedWindowWidth_;
+	int y_ = fixedWindowHeight_;
+	std::string chickenUpImagePath = "images/chicken/chicken_up.png";
+	std::string chickenLeftImagePath = "images/chicken/chicken_left.png";
+	std::string chickenRightImagePath = "images/chicken/chicken_right.png";
+	std::string chickenDownImagePath = "images/chicken/chicken_down.png";
 	ofImage chickenUp_;
 	ofImage chickenLeft_;
 	ofImage chickenRight_;

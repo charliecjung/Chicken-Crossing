@@ -129,5 +129,7 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="PROPOSAL.md" />
+    <None Include="DEVELOPMENT.md" />
+    <None Include="addons.make" />
   </ItemGroup>
 </Project>

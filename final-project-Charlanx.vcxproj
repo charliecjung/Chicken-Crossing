@@ -222,6 +222,8 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="addons.make" />
+    <None Include="DEVELOPMENT.md" />
     <None Include="PROPOSAL.md" />
     <None Include="README.md" />
   </ItemGroup>
