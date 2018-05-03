@@ -50,9 +50,9 @@ Finally fixed a bug with the program not running at all. I wasn't called ofBaseA
 I have now removed the ofxActionManager and replaced it with ofx2DFigures because I believe it enables me to track collisions with enemies and the player.
 Updating a PUSH->Github.com.
 
-Updated images with pictures of a chicken because I couldn't find the owner of the frog's original images. <<b>Royalty creds... </b>>
+Updated images with pictures of a chicken because I couldn't find the owner of the frog's original images. <b>Royalty creds... </b>
 
-<b> This is important for next PUSH: https://github.com/vanderlin/ofxBox2d/blob/master/example-ShapeTexturing/src/ofApp.cpp
+<b> This is important for next PUSH: https://github.com/vanderlin/ofxBox2d/blob/master/example-ShapeTexturing/src/ofApp.cpp </b>
 
 <h1> April 24, 2018 10:46 PM (Tuesday) </h1>
 
