@@ -1,3 +1,0 @@
-/mnt/c/Users/Charlie Jung/Github/final-project-Charlanx/src/tests/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Charlie Jung/Github/final-project-Charlanx/src/tests/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/Charlie Jung/Github/final-project-Charlanx/src/tests/CMakeFiles/tests.dir

@@ -1,2 +1,0 @@
-ofxCenteredTrueTypeFont
-ofxGui
