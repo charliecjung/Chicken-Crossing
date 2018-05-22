@@ -32,4 +32,7 @@ Open Visual Studio and open the solution called "final-project-XXXX.sln" inside 
 
 Then you can click "Local Windows Debugger" to play my game!
 
+Another note: Make sure that your openFrameworks installation is located at "C:/Users". 
+If your oF is located somewhere else, then edit the file paths that are found in the .sln, vcxproj files.
+
 Enjoy!
