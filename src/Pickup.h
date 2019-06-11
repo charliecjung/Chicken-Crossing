@@ -1,10 +1,7 @@
 #ifndef PICKUP_H
 #define PICKUP_H
 
-#include "ofMain.h"
-
-#include <string>
-#include <vector>
+#include "ofmain.h"
 
 class Pickup : public ofBaseApp {
 public:

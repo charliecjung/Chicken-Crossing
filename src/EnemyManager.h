@@ -8,6 +8,7 @@
 #include <string>
 class EnemyManager {
 public:
+        EnemyManager();
 	void SetUp();
 	void draw();
 	bool checkCollision(Player nextPlayer);

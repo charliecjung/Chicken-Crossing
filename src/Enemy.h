@@ -1,10 +1,11 @@
 #ifndef ENEMY_H
 #define ENEMY_H
-
-#include "ofMain.h"
+//#include "Coordinator.cpp"
+#include "ofmain.h"
 
 #include <string>
 #include <vector>
+
 
 class Enemy: public ofBaseApp {
 public:
@@ -26,7 +27,7 @@ public:
 	bool doOverlap(int leftX1, int leftY1, int rightX1, int rightY1, int leftX2, int leftY2, int rightX2, int rightY2);
 
 private:
-		
+
 	int x_;
 	int y_;
 	int width_;
@@ -35,7 +36,7 @@ private:
 	int speed_;
 	ofImage currentImage_;
 	int speedMultiplier_;
-		
+
 };
 
 #endif //ENEMY_H

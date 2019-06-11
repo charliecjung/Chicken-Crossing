@@ -2,11 +2,11 @@
 #define PLAYER_H
 
 #include <string>
-#include "ofMain.h"
+#include "ofmain.h"
 
 class Player {
  public:
-	
+
 	ofImage getCurrentImage();
     int getX();
     int getY();
@@ -29,8 +29,8 @@ class Player {
 	void loadBaseImages();
 
 private:
-	int fixedWindowWidth_ = 1820;
-	int fixedWindowHeight_ = 2060;
+	int fixedWindowWidth_ = Coordinator::Coordinator.gameWidth;
+	int fixedWindowHeight_ = Coordinator::Coordinator.gameHeight;
 	int width_ = 100;
 	int height_ = 100;
 	int isAlive_ = true;
@@ -46,6 +46,6 @@ private:
 	ofImage chickenRight_;
 	ofImage chickenDown_;
 	ofImage currentImage_;
-  
+
 };
 #endif // PLAYER_H

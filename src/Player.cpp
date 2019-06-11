@@ -1,5 +1,6 @@
 #include "Player.h"
-#include "ofxGui.h"
+//#include "ofxGui.h"
+#include "ofxgui.h"
 
 #include <string>
 

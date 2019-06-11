@@ -2,6 +2,8 @@
 #include "EnemyManager.h"
 #include <vector>
 
+EnemyManager::EnemyManager() {
+}
 std::vector <Enemy*> EnemyManager::createRandomEnemies(int numOfEnemies) {
 	std::vector <Enemy*> tempList;
 

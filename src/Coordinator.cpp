@@ -1,12 +1,12 @@
-#include "Player.h"
+#include <iostream>
 #include "Coordinator.h"
-#include "Enemy.h"
-#include "ofMain.h"
-#include "ofxGui.h"
-#include <vector>
 
 bool Coordinator::kIsGameOver = false;
 bool Coordinator::kResetGame = false;
+bool Coordinator::bottomMiddleX = Coordinator.width / 2;
+bool Coordinator::bottomMiddleY = Coordinator.height - 30;
+Coordinator::Coordinator() {
+}
 void Coordinator::setup() {
 	//stop sounds
 
@@ -18,7 +18,7 @@ void Coordinator::setup() {
 	if (SoundPlayer_.isLoaded() == false) {
 		SoundPlayer_.load(soundPath_);
 	}
-
+        std::cout << "blar" << std::endl;
 	eManager.SetUp();
 	player_.loadBaseImages();
 
@@ -48,7 +48,7 @@ void Coordinator::draw() {
 	player_.draw();
 	eManager.draw();
 
-	if (kIsGameOver && player_.getY() > 0 ){	
+	if (kIsGameOver && player_.getY() > 0 ){
 		gameFont.drawStringCentered(gameOverText_, ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
 	}
 	else if (kIsGameOver && player_.getY() <= 0) {
@@ -126,4 +126,3 @@ void Coordinator::ResetGame() {
 	ofRunApp(new Coordinator());
 
 }
-

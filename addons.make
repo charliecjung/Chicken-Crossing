@@ -1,2 +1,2 @@
-ofxCenteredTrueTypeFont
 ofxGui
+ofxCenteredTrueTypeFont

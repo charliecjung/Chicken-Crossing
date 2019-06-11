@@ -174,7 +174,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Coordinator.cpp" />
     <ClCompile Include="src\Enemy.cpp" />
     <ClCompile Include="src\EnemyManager.cpp" />
     <ClCompile Include="src\Pickup.cpp" />
@@ -227,6 +226,9 @@
     <None Include="DEVELOPMENT.md" />
     <None Include="PROPOSAL.md" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Coordinator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ProjectExtensions>

@@ -1,8 +1,5 @@
 
 #include "Enemy.h"
-#include <cstdlib>
-#include <vector>
-#include <string>
 #include "Coordinator.h"
 
 	Enemy::Enemy() {
@@ -22,7 +19,7 @@
 	int Enemy::getX() {
 		return x_;
 	}
-	
+
 	int Enemy::getY() {
 		return y_;
 	}
@@ -34,7 +31,7 @@
 	int Enemy::getHeight() {
 		return height_;
 	}
-	
+
 	bool Enemy::didCollide() {
 		return isCollided_;
 	}
@@ -59,13 +56,13 @@
 		speed_ = newSpeed;
 	}
 	void Enemy::draw() {
-		
+
 		if (Coordinator::kIsGameOver == false) {
 			updatePosition(0);
-		} 
+		}
 		currentImage_.draw(x_, y_, width_, height_);
 	}
-	
+
 	void Enemy::updatePosition(int speedCounter) {
 		if (isCollided_) {
 			speed_ = 0;
@@ -85,7 +82,7 @@
 			x_ = x_ + speed_;
 		}
 	}
-	
+
 	//
 	// Referenced from:
 	// https://www.geeksforgeeks.org/find-two-rectangles-overlap/
@@ -103,10 +100,8 @@
 			glPolygonMode(GL_FRONT, GL_FILL);
 			return false;
 		}
-		
+
 		glPolygonMode(GL_FRONT, GL_FILL);
 		isCollided_ = true;
 		return true;
 	}
-
-	

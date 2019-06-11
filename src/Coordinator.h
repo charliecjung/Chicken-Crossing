@@ -1,16 +1,21 @@
 #ifndef COORDINATOR_H
 #define COORDINATOR_H
-
+#include "Enemy.h"
 #include "EnemyManager.h"
 #include "PickupManager.h"
 #include "Player.h"
-#include "ofMain.h"
+#include "ofmain.h"
 #include <vector>
-#include "ofxCenteredTrueTypeFont.h"
+#include "ofxgui.h"
+#include "ofxcenteredtruetypefont.h"
 #include <string>
+#include <cstdlib>
 
 class Coordinator : public ofBaseApp {
 public:
+        int width = ofGetWindowWidth();
+        int height = ofGetWindowHeight();
+        Coordinator();
 	bool static kIsGameOver;
 	bool static kResetGame;
 	void setup();
@@ -20,7 +25,7 @@ public:
 	void KillPlayer();
 	void GameOver();
 	void ResetGame();
-	
+
 	//
 	// Referenced from:
 	// https://www.geeksforgeeks.org/find-two-rectangles-overlap/
@@ -29,7 +34,6 @@ public:
 	// r1: Bottom Right coordinate of first rectangle.
 	// l2 : Top Left coordinate of second rectangle.
 	// r2 : Bottom Right coordinate of second rectangle.
-	
 private:
 
 	Player player_;
@@ -50,9 +54,9 @@ private:
 
 	ofxCenteredTrueTypeFont gameFont;
 
-	
 
-	
+
+
 };
 
 #endif // COORDINATOR_H
