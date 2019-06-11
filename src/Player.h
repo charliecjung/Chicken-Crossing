@@ -29,8 +29,10 @@ class Player {
 	void loadBaseImages();
 
 private:
-	int fixedWindowWidth_ = Coordinator::Coordinator.gameWidth;
-	int fixedWindowHeight_ = Coordinator::Coordinator.gameHeight;
+	//int fixedWindowWidth_ = Coordinator::Coordinator.gameWidth;
+	//int fixedWindowHeight_ = Coordinator::Coordinator.gameHeight;
+        int fixedWindowWidth_ = 500;
+        int fixedWindowHeight_ = 500;
 	int width_ = 100;
 	int height_ = 100;
 	int isAlive_ = true;

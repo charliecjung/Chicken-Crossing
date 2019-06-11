@@ -3,8 +3,9 @@
 
 bool Coordinator::kIsGameOver = false;
 bool Coordinator::kResetGame = false;
-bool Coordinator::bottomMiddleX = Coordinator.width / 2;
-bool Coordinator::bottomMiddleY = Coordinator.height - 30;
+//Bring these back later
+//bool Coordinator::bottomMiddleX = Coordinator.width / 2;
+//bool Coordinator::bottomMiddleY = Coordinator.height - 30;
 Coordinator::Coordinator() {
 }
 void Coordinator::setup() {

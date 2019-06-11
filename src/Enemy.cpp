@@ -79,7 +79,8 @@
 			else if (x_ <= (0 - (width_ * 2))) {
 				x_ = ofGetWindowWidth();
 			}
-			x_ = x_ + speed_;
+			//x_ = x_ + speed_;
+                        x_ = 0;
 		}
 	}
 
