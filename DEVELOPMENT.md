@@ -73,6 +73,31 @@ a makefile and make some test cases.
 
 Done.
 <h1> Final Tasks </h1>
+Today is June 12, 2019. I decided to create a makefile from scratch.
+
+\\If anyone is still reading this repo, there is a fix to get this working on darwin.
+\\
+I imagine a linux port would not be hard to hack together.
+
+Import the project using openFramework's projectGenerator.
+\\
+From there, don't forget to put ofxCenteredTrueTypeFont into addons.make.
+
+\\
+
+I think after that you have to worry about duplicate headers but the base
+\\
+game will compile with this newly pushed Makefile.
+
+\\
+
+
+The reason for this delay was I tried to find tools to automatically convert
+
+.sln to a Makefile but the tools were either outdated or platform specific.
+\\
+
+Signing out
 
 <h1> May 2, 2018 11:38pm... </h1>
 <b> Finished writing the theoretical test cases. </b>
